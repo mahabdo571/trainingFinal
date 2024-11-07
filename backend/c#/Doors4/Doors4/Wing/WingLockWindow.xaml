@@ -1,0 +1,45 @@
+﻿<Window x:Class="Doors4.Wing.WingLockWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Doors4.Wing"
+        mc:Ignorable="d"
+        Title="{DynamicResource lang_WingLockWindow}" Height="800" Width="600" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+    xmlns:System="clr-namespace:System;assembly=mscorlib">
+    <Window.Resources>
+        <System:String x:Key="langKFV">KFV</System:String>
+    </Window.Resources>
+    <Grid>
+        <Button x:Name="btnBack" Content="{DynamicResource lang_btnclose}" HorizontalAlignment="Center" Margin="0,530,0,0" VerticalAlignment="Top" Height="50" Width="84" FontSize="22" Background="#FF76EFFF" Click="CloseWindow"/>
+        <Label Content="{DynamicResource lang_LockTypeWing}" HorizontalAlignment="Left" Margin="489,42,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnshar60" Content="{DynamicResource langbtnshar60}" HorizontalAlignment="Left" Margin="319,73,0,0" VerticalAlignment="Top" Height="30" Width="80" FontSize="16" Click="btnSavetoDB" Tag="shar60"/>
+        <Button x:Name="btnshar45" Content="{DynamicResource langbtnshar45}" HorizontalAlignment="Left" Margin="234,73,0,0" VerticalAlignment="Top" Height="30" Width="80" FontSize="16" Click="btnSavetoDB" Tag="shar45"/>
+        <Button x:Name="btnFinek" Content="{DynamicResource langbtnFinek}" HorizontalAlignment="Left" Margin="404,73,0,0" VerticalAlignment="Top" Height="30" Width="80" FontSize="16" Click="btnSavetoDB" Tag="Finek"/>
+        <Button x:Name="btnNoLock" Content="{DynamicResource lang_btnNoLockWing}" HorizontalAlignment="Left" Margin="489,73,0,0" VerticalAlignment="Top" Height="30" Width="80" FontSize="16"     Click="btnSavetoDB" Tag="NoLock"/>
+        <Button x:Name="btnShlat" Content="{DynamicResource langbtnShlat}" HorizontalAlignment="Left" Margin="234,118,0,0" VerticalAlignment="Top" Height="30" Width="80" FontSize="16" Click="btnSavetoDB" Tag="Shlat"/>
+        <Button x:Name="btnrol" Content="{DynamicResource langbtnrol}" HorizontalAlignment="Left" Margin="489,118,0,0" VerticalAlignment="Top" Height="30" Width="80" FontSize="16" Click="btnSavetoDB" Tag="rol"/>
+        <Button x:Name="btnKFV" Content="{DynamicResource langKFV}" HorizontalAlignment="Left" Margin="404,118,0,0" VerticalAlignment="Top" Height="30" Width="80" FontSize="16" Click="btnSavetoDB" Tag="KFV"/>
+        <Button x:Name="btnRock" Content="{DynamicResource langbtnRock}" HorizontalAlignment="Left" Margin="319,118,0,0" VerticalAlignment="Top" Height="30" Width="80" FontSize="16"    Click="btnSavetoDB" Tag="Rock"/>
+        <Button x:Name="btnbhla" Content="{DynamicResource langbtnbhla}" HorizontalAlignment="Left" Margin="149,73,0,0" VerticalAlignment="Top" Height="30" Width="80" FontSize="16" Click="btnSavetoDB" Tag="bhla"/>
+        <Button x:Name="btnlfe" Content="{DynamicResource langbtnlfe}" HorizontalAlignment="Left" Margin="149,118,0,0" VerticalAlignment="Top" Height="30" Width="80" FontSize="16" Click="btnSavetoDB" Tag="lfe"/>
+        <Label Content="{DynamicResource langtxtLockMeasure}" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="347,286,0,0"/>
+        <TextBox x:Name="txtLockMeasure" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="40" FontSize="24" HorizontalContentAlignment="Center" Background="#7F80DFFF" MaxLength="4" VerticalContentAlignment="Center" Margin="331,312,0,0" KeyUp="savetodb"/>
+        <Label Content="{DynamicResource langtxtUpperLockMeasure}" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="16" Margin="0,398,141,0"/>
+        <TextBox x:Name="txtUpperLockMeasure" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="40" FontSize="24" HorizontalContentAlignment="Center" Background="#7F80DFFF" MaxLength="4" VerticalContentAlignment="Center" Margin="331,424,0,0" KeyUp="savetodb"/>
+        <Label Content="{DynamicResource langtxtUpperLockMeasureFrame}" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="16" Margin="0,398,299,0"/>
+        <TextBox x:Name="txtUpperLockMeasureFrame" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="40" FontSize="24" HorizontalContentAlignment="Center" Background="#7F80DFFF" MaxLength="4" VerticalContentAlignment="Center" Margin="161,424,0,0" KeyUp="savetodb"/>
+        <Label Content="{DynamicResource langtxtLockMeasureFrame}" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" Margin="146,282,0,0"/>
+        <TextBox x:Name="txtLockMeasureFrame" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="40" FontSize="24" HorizontalContentAlignment="Center" Background="#7F80DFFF" MaxLength="4" VerticalContentAlignment="Center" Margin="161,312,0,0" KeyUp="savetodb"/>
+        <CheckBox x:Name="cbUpperLock" Style="{StaticResource CheckBoxswitch}" Content="{DynamicResource langcbUpperLock}" HorizontalAlignment="Left" Margin="234,190,0,0" VerticalAlignment="Top" Height="34" Width="210" FontSize="22" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Checked="cbUpperLock_Checked" Unchecked="cbUpperLock_Unchecked"/>
+        <Button x:Name="btnzaza" Content="{DynamicResource langbtnzaza}" HorizontalAlignment="Left" Margin="64,118,0,0" VerticalAlignment="Top" Height="30" Width="80" FontSize="16" Tag="zaza" Click="btnSavetoDB"/>
+        <Button Content="Reset" x:Name="btnRest"  HorizontalAlignment="Left" Margin="489,618,0,0" VerticalAlignment="Top" Height="42" Width="72" Click="btnRest_Click"/>
+        <Button Content="Back Data" x:Name="btnBackdb" Visibility="Hidden" HorizontalAlignment="Left" Margin="391,618,0,0" VerticalAlignment="Top" Height="42" Width="72" Click="btnBackdb_Click"/>
+        <Button x:Name="btnelectricity" Content="electricity" Visibility="Visible" HorizontalAlignment="Left" Margin="64,73,0,0" VerticalAlignment="Top" Height="30" Width="80" FontSize="16" Tag="Electricity" Click="btnSavetoDB" />
+        <Label x:Name="lblpletzLocl"  HorizontalAlignment="Left" Background="#ff7f0f" Margin="32,312,0,0" VerticalAlignment="Top" Height="40" Width="120" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="22"/>
+        <Label x:Name="lblpletzUpperLocl" HorizontalAlignment="Left" Background="#ff7f0f" Margin="32,424,0,0" VerticalAlignment="Top" Height="40" Width="120" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="22"/>
+        <Label x:Name="lblUpperLocl" HorizontalAlignment="Left" Background="#ff7f0f" Margin="464,424,0,0" VerticalAlignment="Top" Height="40" Width="120" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="22"/>
+        <Label x:Name="lblLocl"  HorizontalAlignment="Left" Background="#ff7f0f" Margin="464,312,0,0" VerticalAlignment="Top" Height="40" Width="120" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="22"/>
+
+    </Grid>
+</Window>

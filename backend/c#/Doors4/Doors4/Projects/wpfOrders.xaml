@@ -1,0 +1,91 @@
+﻿<Window x:Name="wpfOrdersScreen" x:Class="Doors4.wpfOrders"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Doors4"
+        mc:Ignorable="d"
+                        Height="{Binding SystemParameters.PrimaryScreenHeight}" 
+    Width="{Binding SystemParameters.PrimaryScreenWidth}"
+       FlowDirection="RightToLeft"
+        WindowStartupLocation="CenterScreen"
+  WindowState="Maximized"
+           WindowStyle="None"
+  ResizeMode="NoResize"
+        Title="wpfOrders" Loaded="wpfOrdersScreen_Loaded" d:DesignHeight="677.933" d:DesignWidth="1656.07" >
+    <Window.Background>
+        <ImageBrush ImageSource="/Projects/bg4.jpg" Stretch="UniformToFill"/>
+    </Window.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <DataGrid AlternatingRowBackground="#7F80DFFF" AlternationCount="2"
+                  x:Name="dgvOrders" d:ItemsSource="{d:SampleData ItemCount=5}" 
+                  IsReadOnly="True" VerticalAlignment="Bottom" 
+  FontSize="24" FontWeight="Bold" 
+    Height="500" 
+                    FlowDirection="RightToLeft"
+    Width="{Binding SystemParameters.PrimaryScreenWidth}"
+      
+                  Background="#7F80DFFF" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Bottom">
+
+
+
+            <DataGrid.ContextMenu>
+                <ContextMenu >
+                    <MenuItem Header="{DynamicResource langOpen}" Click="MenuItem_Click_OpenOrder"   />
+                    <MenuItem Header="{DynamicResource langEdit}" Click="MenuItem_Click_EditOrder" />
+                    <MenuItem Header="{DynamicResource langDelete}" Click="MenuItem_Click_Deleteorder" />
+                    <MenuItem Header="{DynamicResource langRefresh}" Click="MenuItem_Click_orderRefres" />
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridCell}">
+                    <EventSetter Event="MouseDoubleClick" Handler="DataGridCell_MouseDoubleClick_Order"/>
+                </Style>
+            </DataGrid.Resources>
+
+
+
+
+
+        </DataGrid>
+        <Button x:Name="btnAddNewOrder" Content="{DynamicResource langbtnAddNewOrder}" HorizontalAlignment="Left" Margin="10,59,0,0" VerticalAlignment="Top" Height="70" Width="250" Click="btnAddNewOrder_Click" FontSize="24" Background="#BF80DFFF"/>
+        <TextBox x:Name="txtSearch"   FlowDirection="LeftToRight" HorizontalAlignment="Center" Margin="0,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="500" TextChanged="txtSearch_TextChanged" Height="100" FontSize="24" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#BFFFFFFF">
+
+
+
+            <TextBox.Style>
+                <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                    <Style.Resources>
+                        <VisualBrush x:Key="CueBannerBrush" AlignmentX="Center" AlignmentY="Center" Stretch="None">
+                            <VisualBrush.Visual>
+                                <Label Content="{DynamicResource langSearch}" FontSize="20" FontWeight="Bold"  Foreground="#7F80DFFF" />
+                            </VisualBrush.Visual>
+                        </VisualBrush>
+                    </Style.Resources>
+                    <Style.Triggers>
+                        <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
+                            <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                        </Trigger>
+                        <Trigger Property="Text" Value="{x:Null}">
+                            <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsKeyboardFocused" Value="True">
+                            <Setter Property="Background" Value="White" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+
+        </TextBox>
+
+
+        <Button x:Name="btnBack" Content="{DynamicResource langback}" HorizontalAlignment="Right" VerticalAlignment="Top" Click="btnBack_Click" Height="50" Width="150" FontSize="36" Margin="0,59,10,0"/>
+        <Button x:Name="btnScan" Content="סריקה" HorizontalAlignment="Right" Margin="0,114,10,0" VerticalAlignment="Top" Width="150" Height="50" Click="btnScan_Click" FontSize="36" />
+        <Label x:Name="lbltitle" Content="Orders For " VerticalAlignment="Top" Background="#BFD1C6F1" FontWeight="Bold" FontSize="36" HorizontalContentAlignment="Center" Height="50" VerticalContentAlignment="Center" Padding="0,0,0,0" />
+
+    </Grid>
+</Window>

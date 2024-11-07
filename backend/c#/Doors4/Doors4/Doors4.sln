@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34003.232
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Doors4", "Doors4.csproj", "{873AA998-2CC7-4377-9DFA-BE90DA0FB47D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sharaDatabase", "..\sharaDatabase\sharaDatabase.csproj", "{FEFE8156-00F7-4CC9-A47B-D3D42DF57388}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharaLogic", "..\SharaLogic\SharaLogic.csproj", "{46D2E8FF-07E4-433D-804D-799E042FE5BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{873AA998-2CC7-4377-9DFA-BE90DA0FB47D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{873AA998-2CC7-4377-9DFA-BE90DA0FB47D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{873AA998-2CC7-4377-9DFA-BE90DA0FB47D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{873AA998-2CC7-4377-9DFA-BE90DA0FB47D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEFE8156-00F7-4CC9-A47B-D3D42DF57388}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEFE8156-00F7-4CC9-A47B-D3D42DF57388}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEFE8156-00F7-4CC9-A47B-D3D42DF57388}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEFE8156-00F7-4CC9-A47B-D3D42DF57388}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46D2E8FF-07E4-433D-804D-799E042FE5BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46D2E8FF-07E4-433D-804D-799E042FE5BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46D2E8FF-07E4-433D-804D-799E042FE5BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46D2E8FF-07E4-433D-804D-799E042FE5BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D164598D-8895-47C7-8B53-F17812E7945C}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,102 @@
+﻿<Application x:Class="Doors4.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Doors4"
+               xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             StartupUri="wpfLodingDB.xaml">
+    <Application.Resources>
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Language/HE.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+
+            <FontWeight x:Key="Font_500">Medium</FontWeight>
+            <SolidColorBrush x:Key="AppColor">#7F80DFFF</SolidColorBrush>
+            <SolidColorBrush x:Key="LangButtonColor">#000000</SolidColorBrush>
+
+            
+            <sys:Double x:Key="ButtonAnimationFontSizeTo">14</sys:Double>
+            <sys:Double x:Key="ButtonAnimationFontSizeFrom">12</sys:Double>
+
+            <SolidColorBrush x:Key="HoverButton"
+                       Color="#7F8044FF" />
+            <SolidColorBrush x:Key="NormalButton"
+                       Color="#7F80DFFF" />
+
+
+            <SolidColorBrush x:Key="BorderColor"
+                       Color="Black" />
+
+            <Style x:Key="CheckBoxswitch" TargetType="{x:Type CheckBox}">
+                <Setter Property="Foreground" Value="#98756f"/>
+                <Setter Property="Background" Value="#98756f"/>
+                <Setter Property="Content" Value="Off"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type CheckBox}">
+                            <ControlTemplate.Resources>
+                                <Storyboard x:Key="OnChecking">
+                                    <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="slider" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                                        <SplineDoubleKeyFrame KeyTime="00:00:00.3000000" Value="26"/>
+                                    </DoubleAnimationUsingKeyFrames>
+                                </Storyboard>
+                                <Storyboard x:Key="OnUnchecking">
+                                    <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="slider" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                                        <SplineDoubleKeyFrame KeyTime="00:00:00.3000000" Value="0" />
+                                    </DoubleAnimationUsingKeyFrames>
+                                    <ThicknessAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="slider" Storyboard.TargetProperty="(FrameworkElement.Margin)">
+                                        <SplineThicknessKeyFrame KeyTime="00:00:00.3000000" Value="1,1,1,1" />
+                                    </ThicknessAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </ControlTemplate.Resources>
+
+                            <DockPanel x:Name="dockPanel" >
+                                <ContentPresenter Margin="0,0,5,0" HorizontalAlignment="Right" VerticalAlignment="Center" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" ContentTemplate="{TemplateBinding ContentTemplate}" RecognizesAccessKey="True" />
+                                <Grid Width="44" Height="16">
+                                    <Border Margin="0" BorderThickness=".5" BorderBrush="#98756f">
+                                        <Grid Width="40" Background="#98756f" >
+                                            <Border Margin="2" x:Name="baseRectangle" BorderThickness="0" Background="#98756f">
+                                            </Border>
+                                        </Grid>
+                                    </Border>
+                                    <Border x:Name="slider" HorizontalAlignment="Left" Margin="0" Width="16" BorderThickness="0" BorderBrush="#98756f" RenderTransformOrigin="0.5,0.5">
+                                        <Border.RenderTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform ScaleX="1" ScaleY="1"/>
+                                                <SkewTransform AngleX="0" AngleY="0" />
+                                                <RotateTransform Angle="0" />
+                                                <TranslateTransform X="0" Y="0" />
+                                            </TransformGroup>
+                                        </Border.RenderTransform>
+                                        <Border.Background>
+                                            <SolidColorBrush >WhiteSmoke</SolidColorBrush>
+                                        </Border.Background>
+                                    </Border>
+                                </Grid>
+                            </DockPanel>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsChecked" Value="True">
+                                    <Trigger.ExitActions>
+                                        <BeginStoryboard Storyboard="{StaticResource OnUnchecking}" x:Name="OnUnchecking_BeginStoryboard"/>
+                                    </Trigger.ExitActions>
+                                    <Trigger.EnterActions>
+                                        <BeginStoryboard Storyboard="{StaticResource OnChecking}" x:Name="OnChecking_BeginStoryboard"/>
+                                    </Trigger.EnterActions>
+                                    <Setter Property="Content" Value="On"/>
+                                    <Setter Property="Background" TargetName="baseRectangle" Value="#060674" />
+                                </Trigger>
+                                <Trigger Property="IsEnabled" Value="False" >
+                                    <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>

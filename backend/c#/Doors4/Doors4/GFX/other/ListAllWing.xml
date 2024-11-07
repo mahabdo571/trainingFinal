@@ -1,0 +1,90 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Table1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+              <xs:element name="OdrerId" type="xs:int" minOccurs="0" />
+              <xs:element name="DoorNumber" type="xs:int" minOccurs="0" />
+              <xs:element name="DateAdded" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DoorType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Direction" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LockType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Location" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FactoryNotes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Notes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tbPrintAmount" type="xs:int" minOccurs="0" />
+              <xs:element name="tbStickers" type="xs:int" minOccurs="0" />
+              <xs:element name="tbAmount" type="xs:int" minOccurs="0" />
+              <xs:element name="AccID" type="xs:int" minOccurs="0" />
+              <xs:element name="UpdateDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ColorDoor" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ColorSide" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FormaicaThickness" type="xs:double" minOccurs="0" />
+              <xs:element name="WidthFinal" type="xs:int" minOccurs="0" />
+              <xs:element name="HeightFinal" type="xs:int" minOccurs="0" />
+              <xs:element name="WidthCut" type="xs:int" minOccurs="0" />
+              <xs:element name="HeightCut" type="xs:int" minOccurs="0" />
+              <xs:element name="DoubleDoor" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SupportHelpless" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MakhzerShemen" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Atmer" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Side" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

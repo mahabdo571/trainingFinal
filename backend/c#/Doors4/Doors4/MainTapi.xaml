@@ -1,0 +1,29 @@
+﻿<Window x:Class="Door3.MainTapi"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Door3"
+        Height="{Binding SystemParameters.PrimaryScreenHeight}" 
+    Width="{Binding SystemParameters.PrimaryScreenWidth}"
+         WindowStartupLocation="CenterScreen"
+  WindowState="Maximized"
+        mc:Ignorable="d"
+           WindowStyle="None"
+  ResizeMode="NoResize"
+        Title="{DynamicResource lang_TitleTapi}" d:DesignHeight="554.345" d:DesignWidth="644.728" >
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/bg1.jpg" Stretch="UniformToFill" Opacity="0.75"/>
+        </Grid.Background>
+        <Button x:Name="btnTapiCoustomer" Content="{DynamicResource lang_btnCoustomersTapi}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="70" Width="250" Click="btnTapiCoustomer_Click" FontSize="36" Background="#7F00BFFF" Margin="0,0,0,220"/>
+        <Button x:Name="btnFrameTest" Content="{DynamicResource lang_btnTestFrameTapi}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="70" Width="250" FontSize="36" Background="#7F00BFFF" Click="btnFrameTest_Click" Margin="0,0,0,0"/>
+        <Button Content="{DynamicResource lang_btnTestDoorTapi}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="70" Width="250" Click="OpenTapiWing" FontSize="36" RenderTransformOrigin="4.116,-0.675" Background="#7F00BFFF" Margin="0,220,0,0"/>
+
+
+        <Button Content="{DynamicResource lang_btnExitTapi}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="70" Width="250" Click="Open_MainWindow" FontSize="24" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,0,10,10"/>
+        <Label x:Name="lbltitle" Content="{DynamicResource lang_TitleTapi}" VerticalAlignment="Top" Background="#BFD1C6F1" FontWeight="Bold" FontSize="36" HorizontalContentAlignment="Center" Height="50" VerticalContentAlignment="Center" Padding="0,0,5,0" />
+        <Button x:Name="btnhome" Content="{DynamicResource lang_btnhomeTapi}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="70" Width="250" FontSize="24" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,0,292,10" Click="btnhome_Click"/>
+
+    </Grid>
+</Window>

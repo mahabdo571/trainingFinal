@@ -1,0 +1,194 @@
+﻿<Window x:Class="Doors4.Projects.DFEditValue"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Doors4.Projects"
+        mc:Ignorable="d"
+        WindowState="Normal"   WindowStyle="None" ResizeMode="NoResize"  
+        Title="DFEditValue" Height="1000" Width="500" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <StackPanel  Orientation="Vertical" HorizontalAlignment="Center" Margin="5,5,5,5" >
+
+            <StackPanel Orientation="Horizontal" Margin="2,2,2,2" HorizontalAlignment="Center" >
+                <Label Content="Name" FontSize="18" Height="50" Width="60"/>
+                <TextBox x:Name="txtName" Height="50" Width="300"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="2,2,2,2" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                <Label FontSize="18"  Content="Description" Height="50" Width="100"/>
+                <TextBox x:Name="txtDec"  TextWrapping="Wrap"
+  AcceptsReturn="True"
+  VerticalScrollBarVisibility="Visible" Height="150" Width="300"/>
+
+
+            </StackPanel>
+
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+
+                <StackPanel Orientation="Horizontal" Margin="2,2,2,2" >
+                    <Label FontSize="22"  Content="A1" Height="50" Width="50"/>
+                    <TextBox x:Name="txtA1" Height="50" Width="100"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="2,2,2,2" >
+                    <Label FontSize="22"  Content="A2" Height="50" Width="50"/>
+                    <TextBox x:Name="txtA2" Height="50" Width="100"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+
+                <StackPanel Orientation="Horizontal" Margin="2,2,2,2" >
+                    <Label FontSize="22"  Content="B1" Height="50" Width="50"/>
+                    <TextBox x:Name="txtB1" Height="50" Width="100"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="2,2,2,2" >
+                    <Label FontSize="22" Content="B2" Height="50" Width="50"/>
+                    <TextBox x:Name="txtB2" Height="50" Width="100"/>
+                </StackPanel>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+
+                <StackPanel Orientation="Horizontal" Margin="2,2,2,2" >
+                    <Label FontSize="22"  Content="C1" Height="50" Width="50"/>
+                    <TextBox x:Name="txtC1" Height="50" Width="100"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="2,2,2,2" >
+                    <Label FontSize="22" Content="C2" Height="50" Width="50"/>
+                    <TextBox x:Name="txtC2" Height="50" Width="100"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+
+                <StackPanel Orientation="Horizontal" Margin="2,2,2,2" >
+                    <Label FontSize="22"  Content="D1" Height="50" Width="50"/>
+                    <TextBox x:Name="txtD1" Height="50" Width="100"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="2,2,2,2" >
+                    <Label FontSize="22" Content="D2" Height="50" Width="50"/>
+                    <TextBox x:Name="txtD2" Height="50" Width="100"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+
+                <StackPanel Orientation="Horizontal" Margin="2,2,2,2" >
+                    <Label FontSize="22"  Content="E1" Height="50" Width="50"/>
+                    <TextBox x:Name="txtE1" Height="50" Width="100"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="2,2,2,2" >
+                    <Label FontSize="22" Content="E2" Height="50" Width="50"/>
+                    <TextBox x:Name="txtE2" Height="50" Width="100"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+
+                <StackPanel Orientation="Horizontal" Margin="2,2,2,2" >
+                    <Label FontSize="22"  Content="F1" Height="50" Width="50"/>
+                    <TextBox x:Name="txtF1" Height="50" Width="100"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="2,2,2,2" >
+                    <Label FontSize="22" Content="F2" Height="50" Width="50"/>
+                    <TextBox x:Name="txtF2" Height="50" Width="100"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+
+                <StackPanel Orientation="Horizontal" Margin="2,2,2,2" >
+                    <Label FontSize="22"  Content="G1" Height="50" Width="50"/>
+                    <TextBox x:Name="txtG1" Height="50" Width="100"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="2,2,2,2" >
+                    <Label FontSize="22" Content="G2" Height="50" Width="50"/>
+                    <TextBox x:Name="txtG2" Height="50" Width="100"/>
+                </StackPanel>
+            </StackPanel>
+
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+
+                <StackPanel Orientation="Horizontal" Margin="2,2,2,2" >
+                    <Label FontSize="22"  Content="F1A" Height="50" Width="50"/>
+                    <TextBox x:Name="txtF1A" Height="50" Width="100"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="2,2,2,2" >
+                    <Label FontSize="22" Content="F1B" Height="50" Width="50"/>
+                    <TextBox x:Name="txtF1B" Height="50" Width="100"/>
+                </StackPanel>
+            </StackPanel>
+
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+
+                <StackPanel Orientation="Horizontal" Margin="2,2,2,2" >
+                    <Label FontSize="22"  Content="F2A" Height="50" Width="50"/>
+                    <TextBox x:Name="txtF2A" Height="50" Width="100"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="2,2,2,2" >
+                    <Label FontSize="22" Content="F2B" Height="50" Width="50"/>
+                    <TextBox x:Name="txtF2B" Height="50" Width="100"/>
+                </StackPanel>
+            </StackPanel>
+
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+
+                <StackPanel Orientation="Horizontal" Margin="2,2,2,2" >
+                    <Label FontSize="18"  Content="K125" Height="50" Width="50"/>
+                    <TextBox x:Name="txtK125" Height="50" Width="100"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="2,2,2,2" >
+                    <Label FontSize="18" Content="K15" Height="50" Width="50"/>
+                    <TextBox x:Name="txtK15" Height="50" Width="100"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+
+                <StackPanel Orientation="Horizontal" Margin="2,2,2,2" >
+                    <Label FontSize="22"  Content="K2" Height="50" Width="50"/>
+                    <TextBox x:Name="txtK2" Height="50" Width="100"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="2,2,2,2" >
+                    <Label FontSize="22" Content="MG" Height="50" Width="50"/>
+                    <TextBox x:Name="txtMG" Height="50" Width="100"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+
+                <StackPanel Orientation="Horizontal" Margin="2,2,2,2" >
+                    <Label FontSize="18"  Content="Bends" Height="50" Width="50"/>
+                    <TextBox x:Name="txtBends" Height="50" Width="100"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="2,2,2,2" >
+                    <Label IsEnabled="False" FontSize="22" Content="???" Height="50" Width="50"/>
+                    <TextBox IsEnabled="False" x:Name="txtBends2" Height="50" Width="100"/>
+                </StackPanel>
+            </StackPanel>
+            
+            
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,2,2,2" >
+
+                <Button x:Name="btnSave" Content="Save and close" Height="50" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnSave_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

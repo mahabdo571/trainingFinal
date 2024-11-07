@@ -1,0 +1,108 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Door3.Wing"
+        xmlns:Wing="clr-namespace:Doors4.Wing" 
+      
+    x:Name="wpfWing" 
+    x:Class="Door3.Wing.TapiWing"
+        mc:Ignorable="d"
+      Height="{Binding SystemParameters.PrimaryScreenHeight}" 
+  Width="{Binding SystemParameters.PrimaryScreenWidth}"
+   
+      WindowStartupLocation="CenterScreen"
+WindowState="Maximized"
+        WindowStyle="None"
+        Title="{DynamicResource lang_WindoTitelWing}"
+         HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Loaded="wpfWing_Loaded" Activated="wpfWing_Activated" MouseMove="wpfWing_MouseMove"
+        >
+    <Window.Background>
+        <ImageBrush ImageSource="/Wing/bg6.png" Stretch="UniformToFill"/>
+    </Window.Background>
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+
+        <Grid  HorizontalAlignment="Center" VerticalAlignment="Center">
+
+            <TextBox x:Name="txtNumberWing" TabIndex="0" HorizontalAlignment="Left" Margin="1365,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="61" Height="30" FontSize="22" HorizontalContentAlignment="Center" FontWeight="Bold"  Background="#7F80DFFF" MaxLength="3" VerticalContentAlignment="Center" KeyUp="saveToDB" LostFocus="txtNumberWing_LostFocus" GotFocus="textboxs_GotFocus" KeyDown="txtNumberWing_KeyDown" TextChanged="txtNumberWing_TextChanged"/>
+            <Button x:Name="btnExit" TabIndex="34" Content="{DynamicResource lang_btnExitWing}" HorizontalAlignment="Left" Margin="1766,948,0,0" VerticalAlignment="Top" Height="40" Width="120" FontSize="24" Click="btnExit_Click"/>
+            <Button x:Name="btnRest" TabIndex="34" Content="Rest" HorizontalAlignment="Left" Margin="1613,948,0,0" VerticalAlignment="Top" Height="40" Width="120" FontSize="24" Click="btnRest_Click"/>
+            <Button x:Name="btnback" TabIndex="34" Content="back data" HorizontalAlignment="Left" Margin="1480,948,0,0" VerticalAlignment="Top" Height="40" Width="120" FontSize="24" Click="btnback_Click" Visibility="Hidden"/>
+
+            <Grid x:Name="allscren" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+
+                <Label  x:Name="lblCustomerName" Content="{DynamicResource lang_lblCustomerNameWing}" HorizontalAlignment="Left" Margin="1440,33,0,0" VerticalAlignment="Top" Height="61" Width="470" FontSize="36" BorderBrush="Black" Background="#BF00BFFF" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                <Label x:Name="lblProjectName" Content="{DynamicResource lang_lblProjectNameWing}" HorizontalAlignment="Left" Margin="1440,112,0,0" VerticalAlignment="Top" Height="62" Width="470" FontSize="36" BorderBrush="Black" Background="#C000BFFF" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                <TextBox x:Name="txtOrderId" HorizontalAlignment="Left" Margin="1274,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="86" Height="30" FontSize="20" HorizontalContentAlignment="Center" Background="#7F80DFFF" MaxLength="6" VerticalContentAlignment="Center" IsEnabled="False"/>
+                <TextBox x:Name="txtLocation"  GotFocus="textboxs_GotFocus" TabIndex="2"  HorizontalAlignment="Left" Margin="1220,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" Height="62" FontSize="16" HorizontalContentAlignment="Center" Background="#7F80DFFF" VerticalContentAlignment="Center" MaxLines="3" KeyUp="saveToDB" LostFocus="txtFactoryNotes_LostFocus"/>
+                <TextBox x:Name="txtNotes"  GotFocus="textboxs_GotFocus" TabIndex="3"  HorizontalAlignment="Left" Margin="1009,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" Height="62" FontSize="16" HorizontalContentAlignment="Center" Background="#7F80DFFF" VerticalContentAlignment="Center" MaxLines="3" KeyUp="saveToDB" LostFocus="txtFactoryNotes_LostFocus"/>
+                <TextBox x:Name="txtFactoryNotes"  GotFocus="textboxs_GotFocus" TabIndex="4"  HorizontalAlignment="Left" Margin="798,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" Height="62" FontSize="16" HorizontalContentAlignment="Center" Background="#7F80DFFF" VerticalContentAlignment="Center" MaxLines="3" KeyUp="saveToDB" LostFocus="txtFactoryNotes_LostFocus"/>
+                <Label Content="{DynamicResource langtxtNumberWing}" HorizontalAlignment="Left" Margin="1373,32,0,0" VerticalAlignment="Top" Width="45" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsTabStop="True" FontSize="16"/>
+                <Label Content="{DynamicResource langtxtOrderId}" HorizontalAlignment="Left" Margin="1274,32,0,0" VerticalAlignment="Top" Width="86" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsTabStop="True" FontSize="16"/>
+                <Label Content="{DynamicResource langtxtLocation}" HorizontalAlignment="Left" Margin="1248,81,0,0" VerticalAlignment="Top" Width="156" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsTabStop="True" FontSize="16"/>
+                <Label Content="{DynamicResource langtxtNotes}" HorizontalAlignment="Left" Margin="1034,81,0,0" VerticalAlignment="Top" Width="156" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsTabStop="True" FontSize="16"/>
+                <Label Content="{DynamicResource langtxtFactoryNotes}" HorizontalAlignment="Left" Margin="823,81,0,0" VerticalAlignment="Top" Width="156" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsTabStop="True" FontSize="16"/>
+                <Label Content="{DynamicResource langtxtAccID}" HorizontalAlignment="Left" Margin="1069,32,0,0" VerticalAlignment="Top" Width="86" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsTabStop="True" FontSize="16"/>
+                <TextBox x:Name="txtAccID"  TabIndex="1"  HorizontalAlignment="Left" Margin="1009,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" Height="30" FontSize="16" HorizontalContentAlignment="Center" Background="#7F80DFFF" VerticalContentAlignment="Center" MaxLines="1" MaxLength="21" KeyUp="saveToDB" LostFocus="txtFactoryNotes_LostFocus" GotFocus="textboxs_GotFocus"/>
+                <Button x:Name="btnPrintAll" TabIndex="33" Content="{DynamicResource lang_btnPrintDirectWing}" HorizontalAlignment="Left" Margin="10,928,0,45" Width="120" FontSize="24" Click="PrintReport"/>
+                <Button x:Name="btnPrintStikrs" TabIndex="32" Content="{DynamicResource lang_btnPrintDirectStikrsWing}" HorizontalAlignment="Left" Margin="135,928,0,0" VerticalAlignment="Top" Height="40" Width="120" FontSize="24" Click="btnPrintStikrs_Click"/>
+                <Button x:Name="btnAmount" TabIndex="31" Content="{DynamicResource lang_btnPringPeaper}" HorizontalAlignment="Left" Margin="260,928,0,0" VerticalAlignment="Top" Height="40" Width="120" FontSize="24" Click="btnAmount_Click"/>
+                <Button x:Name="btnCopy" TabIndex="30" Content="{DynamicResource lang_btnCopyWing}" HorizontalAlignment="Left" Margin="385,928,0,0" VerticalAlignment="Top" Height="40" Width="120" FontSize="24" Click="btnCopy_Click"/>
+                <Button x:Name="btnWingType" TabIndex="14" Content="{DynamicResource lang_btnWingTypeWing}" HorizontalAlignment="Left" Margin="1766,218,0,0" VerticalAlignment="Top" Height="40" Width="120" FontSize="24" Click="btnWingType_Click"/>
+                <Button x:Name="btnWingLock" TabIndex="16" Content="{DynamicResource lang_btnWingLockWing}" HorizontalAlignment="Left" Margin="1516,218,0,0" VerticalAlignment="Top" Height="40" Width="120" FontSize="24" Click="btnWingLock_Click"/>
+                <Button x:Name="btnWingHinge" TabIndex="15" Content="{DynamicResource lang_btnWingHingeWing}" HorizontalAlignment="Left" Margin="1641,218,0,0" VerticalAlignment="Top" Height="40" Width="120" FontSize="24" Click="btnWingHinge_Click"/>
+                <Button x:Name="btnWingSubtit" TabIndex="17" Content="{DynamicResource lang_btnWingSubtiWing}" HorizontalAlignment="Left" Margin="1391,218,0,0" VerticalAlignment="Top" Height="40" Width="120" FontSize="24" Click="btnWingSubtit_Click"/>
+                <Button x:Name="btnWingAddons" TabIndex="18" Content="{DynamicResource lang_btnWingAddonsWing}" HorizontalAlignment="Left" Margin="1266,218,0,0" VerticalAlignment="Top" Height="40" Width="120" FontSize="24" Click="btnWingAddons_Click"/>
+                <Button x:Name="btnWingAdvanced" TabIndex="19" Content="{DynamicResource lang_btnWingAdvancedWing}" HorizontalAlignment="Left" Margin="1141,218,0,0" VerticalAlignment="Top" Height="40" Width="120" FontSize="24" Click="btnWingAdvanced_Click"/>
+                <Button x:Name="btnKantManual" TabIndex="19" Content="Kant" HorizontalAlignment="Left" Margin="1011,218,0,0" VerticalAlignment="Top" Height="40" Width="120" FontSize="24" Click="btnKantManual_Click" />
+                <Label Content="{DynamicResource langtxtColorWing}" HorizontalAlignment="Left" Margin="1694,299,0,0" VerticalAlignment="Top" Width="106" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsTabStop="True" FontSize="16"/>
+              
+                
+                <ComboBox x:Name="cbColorWing" TabIndex="6" IsTextSearchEnabled="True"  IsEditable="True" BorderThickness="1"  BorderBrush="#7F80DFFF" Background="#7F80DFFF"  HorizontalAlignment="Left" DisplayMemberPath="ColorName" SelectedValuePath="ID" Margin="1641,331,0,0" VerticalAlignment="Top" FontSize="22" Width="219" Height="35"  LostFocus="cbColorWing_LostFocus" SelectionChanged="cbColorWing_SelectionChanged"/>
+
+                <Label Content="{DynamicResource langtxtColorSide}" HorizontalAlignment="Left" Margin="1694,364,0,0" VerticalAlignment="Top" Width="106" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsTabStop="True" FontSize="16"/>
+                <Label Content="{DynamicResource langtxtHightCut}" HorizontalAlignment="Left" Margin="1753,456,0,0" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsTabStop="True" FontSize="16"/>
+                <Label Content="{DynamicResource langtxtWidthCut}" HorizontalAlignment="Left" Margin="1605,456,0,0" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsTabStop="True" FontSize="16"/>
+                <TextBox x:Name="txtHightCut"  GotFocus="textboxs_GotFocus" TabIndex="9"  HorizontalAlignment="Left" Margin="1740,591,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="40" FontSize="24" HorizontalContentAlignment="Center" Background="#7F80DFFF" MaxLength="4" VerticalContentAlignment="Center" KeyUp="saveToDB" TextChanged="txtHightCut_TextChanged" LostFocus="txtFactoryNotes_LostFocus"/>
+                <TextBox x:Name="txtWidthCut"  GotFocus="textboxs_GotFocus" TabIndex="10"  HorizontalAlignment="Left" Margin="1595,591,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="40" FontSize="24" HorizontalContentAlignment="Center" Background="#7F80DFFF" MaxLength="4" VerticalContentAlignment="Center" KeyUp="saveToDB" TextChanged="txtWidthCut_TextChanged" LostFocus="txtFactoryNotes_LostFocus"/>
+                <Label Content="{DynamicResource langtxtHightFinal}" HorizontalAlignment="Left" Margin="1753,555,0,0" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsTabStop="True" FontSize="16"/>
+                <Label Content="{DynamicResource langtxtWidthFinal}" HorizontalAlignment="Left" Margin="1605,555,0,0" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsTabStop="True" FontSize="16"/>
+                <TextBox x:Name="txtHightFinal" TabIndex="7"  GotFocus="textboxs_GotFocus"  HorizontalAlignment="Left" Margin="1740,491,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="40" FontSize="24" HorizontalContentAlignment="Center" Background="#7F80DFFF" MaxLength="4" VerticalContentAlignment="Center" KeyUp="saveToDB" TextChanged="txtHightFinal_TextChanged" LostFocus="txtFactoryNotes_LostFocus"/>
+                <TextBox x:Name="txtWidthFinal" TabIndex="8"  GotFocus="textboxs_GotFocus"  HorizontalAlignment="Left" Margin="1595,491,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="40" FontSize="24" HorizontalContentAlignment="Center" Background="#7F80DFFF" MaxLength="4" VerticalContentAlignment="Center" KeyUp="saveToDB" TextChanged="txtWidthFinal_TextChanged" LostFocus="txtFactoryNotes_LostFocus"/>
+                <Button x:Name="btnDirectionR" TabIndex="22" Content="{DynamicResource lang_btnDirectionRWing}" HorizontalAlignment="Left" Margin="1743,674,0,0" VerticalAlignment="Top" Height="40" Width="120" FontSize="24" Background="#FFF7FFAE" Tag="Right" Click="saveToDB"/>
+                <Button x:Name="btnDirectionL" TabIndex="23" Content="{DynamicResource lang_btnDirectionLWing}" HorizontalAlignment="Left" Margin="1595,674,0,0" VerticalAlignment="Top" Height="40" Width="120" FontSize="24" Background="#FFFFA5A5" Tag="Left" Click="saveToDB"/>
+                <CheckBox x:Name="cbSupportHelpless" TabIndex="25" Style="{StaticResource CheckBoxswitch}" Content="{DynamicResource lang_cbSupportHelplessWing}" HorizontalAlignment="Left" Margin="668,740,0,0" VerticalAlignment="Top" Height="40" Width="166" FontSize="22" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Checked="saveToDB" Unchecked="saveToDB"/>
+                <CheckBox x:Name="cbMakhzerShemen" TabIndex="26" Style="{StaticResource CheckBoxswitch}" Content="{DynamicResource lang_cbjackWing}" HorizontalAlignment="Left" Margin="662,780,0,0" VerticalAlignment="Top" Height="40" Width="171" FontSize="22" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Checked="saveToDB" Unchecked="saveToDB" Click="cbMakhzerShemen_Click"/>
+                <CheckBox x:Name="cbAtmer" TabIndex="27" Style="{StaticResource CheckBoxswitch}" Content="{DynamicResource lang_cbAtmerWing}" HorizontalAlignment="Left" Margin="675,825,0,0" VerticalAlignment="Top" Height="40" Width="189" FontSize="22" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Checked="saveToDB" Unchecked="saveToDB"/>
+                <CheckBox x:Name="cbSide" TabIndex="28" Style="{StaticResource CheckBoxswitch}" Content="{DynamicResource lang_cbNoSideWing}" HorizontalAlignment="Left" Margin="677,870,0,0" VerticalAlignment="Top" Height="40" Width="166" FontSize="22" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Checked="saveToDB" Unchecked="saveToDB"/>
+
+                <Label Content="{DynamicResource langbtnFormicaThiknss}" HorizontalAlignment="Left" Margin="1474,294,0,0" VerticalAlignment="Top" Width="120" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsTabStop="True" FontSize="16"/>
+                <Button x:Name="btnFormicaThiknss2_5" TabIndex="20" Content="{DynamicResource lang_btnFormicaThiknss2_5Wing}" HorizontalAlignment="Left" Margin="1537,326,0,0" VerticalAlignment="Top" Height="36" Width="50" FontSize="24" Click="saveToDB"/>
+                <Button x:Name="btnFormicaThiknss4" TabIndex="21" Content="{DynamicResource lang_btnFormicaThiknss4Wing}" HorizontalAlignment="Left" Margin="1482,326,0,0" VerticalAlignment="Top" Height="36" Width="50" FontSize="24" Click="saveToDB"/>
+                <TextBox x:Name="tbAmount"  GotFocus="textboxs_GotFocus" TabIndex="11"  HorizontalAlignment="Left" Margin="1496,679,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="57" Height="35" FontSize="24" HorizontalContentAlignment="Center" Background="#7F80DFFF" MaxLength="3" VerticalContentAlignment="Center" KeyUp="saveToDB" LostFocus="txtFactoryNotes_LostFocus" FontWeight="Bold"/>
+                <TextBox x:Name="tbStickers"  GotFocus="textboxs_GotFocus" TabIndex="12"  HorizontalAlignment="Left" Margin="165,973,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" Height="40" FontSize="24" HorizontalContentAlignment="Center" Background="#7F80DFFF" MaxLength="3" VerticalContentAlignment="Center" KeyUp="saveToDB" LostFocus="txtFactoryNotes_LostFocus" TextChanged="tbStickers_TextChanged"/>
+                <TextBox x:Name="tbPrintAmount"  GotFocus="textboxs_GotFocus" TabIndex="13"  HorizontalAlignment="Left" Margin="40,973,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" Height="40" FontSize="24" HorizontalContentAlignment="Center" Background="#7F80DFFF" MaxLength="3" VerticalContentAlignment="Center" KeyUp="saveToDB" LostFocus="txtFactoryNotes_LostFocus"/>
+                <Button x:Name="btnView" TabIndex="29" Content="{DynamicResource lang_btnViewWing}" HorizontalAlignment="Left" Margin="514,928,0,0" VerticalAlignment="Top" Height="40" Width="120" FontSize="24" Click="btnView_Click"/>
+                <CheckBox x:Name="cbDoubleDoor"  TabIndex="24" Style="{StaticResource CheckBoxswitch}" Content="{DynamicResource lang_cbDoubleDoorWing}" HorizontalAlignment="Left" Margin="664,694,0,0" VerticalAlignment="Top" Height="40" Width="194" FontSize="22" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Checked="cbDoubleDoor_Checked" Unchecked="cbDoubleDoor_Unchecked" RenderTransformOrigin="0.53,0.765" Click="cbDoubleDoor_Click"/>
+                <CheckBox x:Name="cbDDAK" TabIndex="24" IsChecked="False" Visibility="Hidden" Style="{StaticResource CheckBoxswitch}" Content="A" HorizontalAlignment="Left" Margin="677,645,0,0" VerticalAlignment="Top" Height="40" Width="194" FontSize="22" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Checked="cbDDAK_Checked" Unchecked="cbDDAK_Unchecked" RenderTransformOrigin="0.53,0.765"/>
+
+                <Wing:ucView x:Name="ucViewWinge" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" OnCalculationComplete="ucViewWinge_OnCalculationComplete_1" Height="890" />
+
+                <Popup x:Name="popTextBoxTF" Placement="Bottom">
+                    <TextBlock  Background="Red" FontWeight="Bold" Foreground="#ffffff">Press agen to false this</TextBlock>
+                </Popup>
+                <Popup x:Name="popTextBoxTFwingNum" Placement="Bottom">
+                    <Label  Background="Red" Content="{DynamicResource Thisdoornumberisrepeatedinthisorder}" FontWeight="Bold" Foreground="#ffffff"></Label>
+                </Popup>
+
+                <ComboBox x:Name="cbColorSidelist" TabIndex="6" IsTextSearchEnabled="True"  IsEditable="True" BorderThickness="1"  BorderBrush="#7F80DFFF" Background="#7F80DFFF"  HorizontalAlignment="Left" DisplayMemberPath="ColorName" SelectedValuePath="ID" Margin="1641,395,0,0" VerticalAlignment="Top" FontSize="22" Width="219" Height="35" SelectionChanged="cbColorSidelist_SelectionChanged" LostFocus="cbColorSidelist_LostFocus"/>
+
+                <Label x:Name="lblAmountPrinPaeper" Content="Label" HorizontalAlignment="Left" Margin="32,0,0,90" VerticalAlignment="Bottom" Height="23" Width="60" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                <Label x:Name="lblAmountPrinstikrs" Content="Label" HorizontalAlignment="Left" Margin="165,0,0,90" VerticalAlignment="Bottom" Height="23" Width="60" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                <Label Content="כמות" HorizontalAlignment="Left" Margin="1499,642,0,0" VerticalAlignment="Top" FontSize="20"/>
+            </Grid>
+        </Grid>
+    </ScrollViewer>
+</Window>

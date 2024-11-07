@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FEFE8156-00F7-4CC9-A47B-D3D42DF57388}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>sharaDatabase</RootNamespace>
+    <AssemblyName>SharabanyDoorsDB</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\Doors4\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="claDataAccessWingWindows.cs" />
+    <Compile Include="clsDAColorFormica.cs" />
+    <Compile Include="clsDAColorSide.cs" />
+    <Compile Include="clsDAKantWingDefault.cs" />
+    <Compile Include="clsDAKantWingManual.cs" />
+    <Compile Include="clsDataAccessFrameAdvanced.cs" />
+    <Compile Include="clsDataAccessCustomers.cs" />
+    <Compile Include="clsDataAccessFrameLockType.cs" />
+    <Compile Include="clsDataAccessFrames.cs" />
+    <Compile Include="clsDataAccessFrameType.cs" />
+    <Compile Include="clsDataAccessFrameUpperPart.cs" />
+    <Compile Include="clsDataAccessHingesFrames.cs" />
+    <Compile Include="clsDataAccessOrders.cs" />
+    <Compile Include="clsdataAccessPrisa.cs" />
+    <Compile Include="clsDataAccessProjects.cs" />
+    <Compile Include="clsDataAccessSettings.cs" />
+    <Compile Include="clsDataAccessWing.cs" />
+    <Compile Include="clsDataAccessWingAdvanced.cs" />
+    <Compile Include="clsDataAccessWingHinge.cs" />
+    <Compile Include="clsDataAccessWingLock.cs" />
+    <Compile Include="clsDataAccessWingType.cs" />
+    <Compile Include="clsExportDoorFrameDetailsToExcelFileDTO.cs" />
+    <Compile Include="clsFrameDefaultDataAccess.cs" />
+    <Compile Include="clsGlobalSearchDA.cs" />
+    <Compile Include="clsPrisaSizeDA.cs" />
+    <Compile Include="clsSettingInfoConnection.cs" />
+    <Compile Include="clsStringEncrypt.cs" />
+    <Compile Include="clsDataAccessWingAddon.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

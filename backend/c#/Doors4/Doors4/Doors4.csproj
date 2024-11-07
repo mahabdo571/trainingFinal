@@ -1,0 +1,861 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{873AA998-2CC7-4377-9DFA-BE90DA0FB47D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Doors4</RootNamespace>
+    <AssemblyName>SharabanyDoors</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>shaaa.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ReachFramework" />
+    <Reference Include="sapbusinessobjects.wpf.viewer, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="SAPBusinessObjects.WPF.ViewerShared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WpfAnimatedGif, Version=2.0.0.0, Culture=neutral, PublicKeyToken=9e7cd3b544a090dc, processorArchitecture=MSIL">
+      <HintPath>packages\WpfAnimatedGif.2.0.2\lib\net40\WpfAnimatedGif.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsGenral\clsUtil.cs" />
+    <Compile Include="clsGenral\clsValidationData.cs" />
+    <Compile Include="clsSettingInfoConnection.cs" />
+    <Compile Include="Frame\TapiFrameFinal.xaml.cs">
+      <DependentUpon>TapiFrameFinal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Frame\TestDelete.xaml.cs">
+      <DependentUpon>TestDelete.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Frame\ucFrameView.xaml.cs">
+      <DependentUpon>ucFrameView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\clsParameterForPrint.cs" />
+    <Compile Include="Projects\DefultKantWingValue.xaml.cs">
+      <DependentUpon>DefultKantWingValue.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\DFEditValue.xaml.cs">
+      <DependentUpon>DFEditValue.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\ScannedOrders.xaml.cs">
+      <DependentUpon>ScannedOrders.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\ShowImageOrderScaned.xaml.cs">
+      <DependentUpon>ShowImageOrderScaned.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ReportWing\clsCrpStickerPackingWing.cs" />
+    <Compile Include="ReportWing\clsListOrderWing.cs" />
+    <Compile Include="ReportWing\clsPackingWingToStikrs.cs" />
+    <Compile Include="ReportWing\clsParameterForPrintWing.cs" />
+    <Compile Include="ReportWing\clsSetParameterToReportAlphaWing.cs" />
+    <Compile Include="ReportWing\clsSetParameterToReportWing.cs" />
+    <Compile Include="ReportWing\clsSetParameterToStikarsReportWing.cs" />
+    <Compile Include="ReportWing\clsTrisListInOrder.cs" />
+    <Compile Include="ReportWing\clsTrisStikrsAndParmiter.cs" />
+    <Compile Include="ReportWing\clsUpdateSetdataAfterCalc.cs" />
+    <Compile Include="ReportWing\crAllWingInOrder.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crAllWingInOrder.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportWing\CrpStickerWindowTris.cs">
+      <DependentUpon>CrpStickerWindowTris.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ReportWing\CrpStickerAlphaWing.cs">
+      <DependentUpon>CrpStickerAlphaWing.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ReportWing\CrpStickerPackingWing.cs">
+      <DependentUpon>CrpStickerPackingWing.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ReportWing\CrpStikarsWing.cs">
+      <DependentUpon>CrpStikarsWing.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ReportWing\wpfView.xaml.cs">
+      <DependentUpon>wpfView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Report\clsPackingFrameStikrs.cs" />
+    <Compile Include="Report\clsPrisaSizesGetValueFromData.cs" />
+    <Compile Include="Report\clsSetParameterStickerPrisaFrame.cs" />
+    <Compile Include="Report\clsSetParameterToReport.cs" />
+    <Compile Include="Report\clsSetParameterToStikarsReport.cs" />
+    <Compile Include="ReportWing\CrpWing1.cs">
+      <DependentUpon>CrpWing.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Report\clsPrintDirect.cs" />
+    <Compile Include="Report\CrpFrame.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrpFrame.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CrpStickerPackingFrame.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrpStickerPackingFrame.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CrpStickerPrisaFrame.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrpStickerPrisaFrame.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CrpStikarsFrame.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrpStikarsFrame.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\StickerPackingFrame.cs" />
+    <Compile Include="Report\WpfPrintView.xaml.cs">
+      <DependentUpon>WpfPrintView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Wing\KantManual.xaml.cs">
+      <DependentUpon>KantManual.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Wing\TapiWing.xaml.cs">
+      <DependentUpon>TapiWing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\wpfAddNewOrder.xaml.cs">
+      <DependentUpon>wpfAddNewOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\wpfAddNewProject.xaml.cs">
+      <DependentUpon>wpfAddNewProject.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\wpfGlobalSearch.xaml.cs">
+      <DependentUpon>wpfGlobalSearch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\wpfOrderPage.xaml.cs">
+      <DependentUpon>wpfOrderPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\wpfOrders.xaml.cs">
+      <DependentUpon>wpfOrders.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Wing\ucView.xaml.cs">
+      <DependentUpon>ucView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Wing\WingAddonWindow.xaml.cs">
+      <DependentUpon>WingAddonWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Wing\WingAdvancedWindow.xaml.cs">
+      <DependentUpon>WingAdvancedWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Wing\WingHingeWindow.xaml.cs">
+      <DependentUpon>WingHingeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Wing\WingLockWindow.xaml.cs">
+      <DependentUpon>WingLockWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Wing\WingSubtitWindow.xaml.cs">
+      <DependentUpon>WingSubtitWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Wing\WingTypeWindow.xaml.cs">
+      <DependentUpon>WingTypeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wpfLodingDB.xaml.cs">
+      <DependentUpon>wpfLodingDB.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wpfSetting.xaml.cs">
+      <DependentUpon>wpfSetting.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Projects\CustomersCreate.xaml.cs">
+      <DependentUpon>CustomersCreate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Frame\TapiFrame.xaml.cs">
+      <DependentUpon>TapiFrame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Frame\TapiFrameAdvancedWindow.xaml.cs">
+      <DependentUpon>TapiFrameAdvancedWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Frame\TapiFrameBottomPartWindow.xaml.cs">
+      <DependentUpon>TapiFrameBottomPartWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Frame\TapiFrameHingeWindow.xaml.cs">
+      <DependentUpon>TapiFrameHingeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Frame\TapiFrameLockWindow.xaml.cs">
+      <DependentUpon>TapiFrameLockWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Frame\TapiFramePrisaWindow.xaml.cs">
+      <DependentUpon>TapiFramePrisaWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Frame\TapiFrameTypeWindow.xaml.cs">
+      <DependentUpon>TapiFrameTypeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\MainCustomers.xaml.cs">
+      <DependentUpon>MainCustomers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Projects\MainProjects.xaml.cs">
+      <DependentUpon>MainProjects.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainTapi.xaml.cs">
+      <DependentUpon>MainTapi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Print\PrintFrame1.xaml.cs">
+      <DependentUpon>PrintFrame1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Print\PrintFrame2.xaml.cs">
+      <DependentUpon>PrintFrame2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="ReportWing\crAllWingInOrder.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crAllWingInOrder.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportWing\CrpStickerWindowTris.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrpStickerWindowTris.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportWing\CrpStickerAlphaWing.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrpStickerAlphaWing.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportWing\CrpStickerPackingWing.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrpStickerPackingWing.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportWing\CrpStikarsWing.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrpStikarsWing.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportWing\CrpWing.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrpWing1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CrpFrame.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrpFrame.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CrpStickerPackingFrame.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrpStickerPackingFrame.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CrpStickerPrisaFrame.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrpStickerPrisaFrame.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CrpStikarsFrame.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrpStikarsFrame.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Frame\TapiFrameFinal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Frame\ucFrameView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Language\AR.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Language\EN.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Language\HE.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Projects\CustomersCreate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Frame\TapiFrame.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Frame\TapiFrameAdvancedWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Frame\TapiFrameBottomPartWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Frame\TapiFrameHingeWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Frame\TapiFrameLockWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Frame\TapiFramePrisaWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Frame\TapiFrameTypeWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Frame\TestDelete.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Projects\DefultKantWingValue.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Projects\DFEditValue.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Projects\MainCustomers.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Projects\MainProjects.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainTapi.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Print\PrintFrame1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Print\PrintFrame2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Projects\ScannedOrders.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Projects\ShowImageOrderScaned.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReportWing\wpfView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Report\WpfPrintView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Wing\KantManual.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Wing\TapiWing.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Projects\wpfAddNewOrder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Projects\wpfAddNewProject.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Projects\wpfGlobalSearch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Projects\wpfOrderPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Projects\wpfOrders.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Wing\ucView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Wing\WingAddonWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Wing\WingAdvancedWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Wing\WingHingeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Wing\WingLockWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Wing\WingSubtitWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Wing\WingTypeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wpfLodingDB.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wpfSetting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="logoColor.gif" />
+    <Resource Include="Picture10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="GFX\Extra\Empty.gif" />
+    <Resource Include="GFX\Frame\BlackBox.gif" />
+    <Resource Include="GFX\Frame\FrameCutA1.gif" />
+    <Resource Include="GFX\Frame\FrameCutF1.gif" />
+    <Resource Include="GFX\Frame\FrameCutF2.gif" />
+    <Resource Include="GFX\Frame\FrameGIRG.gif" />
+    <Resource Include="GFX\Frame\FrameHoleA1.gif" />
+    <Resource Include="GFX\Frame\FrameHoleA2.gif" />
+    <Resource Include="GFX\Frame\FrameLock1.gif" />
+    <Resource Include="GFX\Frame\FrameSideF1.gif" />
+    <Resource Include="GFX\Frame\FrameSideF2.gif" />
+    <Resource Include="GFX\Frame\FrameSTR1.gif" />
+    <Resource Include="GFX\Test\Picture1.png" />
+    <Resource Include="GFX\Test\Picture10.png" />
+    <Resource Include="GFX\Test\Picture11.png" />
+    <Resource Include="GFX\Test\Picture12.png" />
+    <Resource Include="GFX\Test\Picture13.png" />
+    <Resource Include="GFX\Test\Picture14.png" />
+    <Resource Include="GFX\Test\Picture3.png" />
+    <Resource Include="GFX\Test\Picture4.png" />
+    <Resource Include="GFX\Test\Picture5.png" />
+    <Resource Include="GFX\Test\Picture6.png" />
+    <Resource Include="GFX\Test\Picture7.png" />
+    <Resource Include="GFX\Test\Picture8.png" />
+    <Resource Include="GFX\Test\Picture9.png" />
+    <Resource Include="GFX\UI\bg1.jpg" />
+    <Resource Include="GFX\UI\bg2.jpg" />
+    <Resource Include="GFX\UI\bg3.jpg" />
+    <Resource Include="GFX\UI\bg4.jpg" />
+    <Resource Include="GFX\UI\logoColor.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GFX\Measurements\" />
+    <Folder Include="GFX\Wing\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bg1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Frame\FrameSideF1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Frame\FrameSTR1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Frame\BlackBox.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Frame\FrameHoleA2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Frame\FrameLock1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Frame\FrameSideF1UpperZigug.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Frame\FrameCutBlind.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Frame\Line1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Frame\Arrow.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Frame\GevesLine.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Frame\FrameCutF2KT.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Frame\Hinge.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Wing\WingWood1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Wing\WingTris1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Wing\WingWindowHatch.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Wing\WingLock1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Frame\FrameCutA1.gif" />
+    <Resource Include="Frame\FrameCutAlbasha.gif" />
+    <Resource Include="Frame\FrameCutAlphaF2.gif" />
+    <Resource Include="Frame\FrameCutPendel.gif" />
+    <Resource Include="Frame\FrameGIRG.gif" />
+    <Resource Include="Frame\FrameMishtalev.gif" />
+    <Resource Include="Frame\FrameSideF1UpperRefafaR.gif" />
+    <Resource Include="Frame\FrameSidePendel.gif" />
+    <Resource Include="Frame\FrameTopLock1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WingEmpty.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WingWood1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WingKantHidden.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WingTris3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WingWindow3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WingLock1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="AlphaPole.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="AlphaTop.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="DoubleDoorPole1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Hinge1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Hinge2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="HingeWing.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="TrisSide2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="SideSupport.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UpperSupport.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UpDoorOpenLeft.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UpDoorHandleRightD.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UpDoorHandleRightU.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UpDoorHandleLeftD.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UpDoorHandleLeftU.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UpDoorSupport.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WingLock4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WingWindowViewPort.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Line1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Wing\UpperSupport.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Wing\SideSupport.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Wing\WingEmpty.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Wing\WingKantHidden.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Wing\WingTris3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Wing\WingWindow3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Wing\AlphaPole.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Wing\DoubleDoorPole1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Wing\TrisSide2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Wing\UpDoorHandleLeftU.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Wing\UpDoorOpenLeft.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Wing\UpDoorHandleRightD.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Wing\UpDoorHandleRightU.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Wing\UpDoorHandleLeftD.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Wing\UpDoorSupport.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Wing\WingLock4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Wing\WingWindowViewPort.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Wing\Line1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WindowWideSize.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="TrisWideSize.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WingLock6.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Wing\HingeS1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Wing\HingeS2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Wing\HingeS7.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Wing\HingeS6.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Wing\HingeS5.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Wing\HingeS4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Wing\HingeS3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="shaaa.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SharaLogic\SharaLogic.csproj">
+      <Project>{46d2e8ff-07e4-433d-804d-799e042fe5bc}</Project>
+      <Name>SharaLogic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="logo1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WIA">
+      <Guid>{94A0E92D-43C0-494E-AC29-FD45948A5221}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Wing\WingKantVisibleDouble2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Wing\Kant3D.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Projects\bg2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Projects\bg3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Projects\bg4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Wing\bg6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Frame\bg5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Frame\bg7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Frame\bg6.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

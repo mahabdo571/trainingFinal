@@ -1,0 +1,52 @@
+USE [SharabanyOrder]
+GO
+/****** Object:  StoredProcedure [dbo].[SP_GruopPrisaSizesWidth]    Script Date: 3/25/2024 2:46:26 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROCEDURE [dbo].[SP_GruopPrisaSizesWidth]
+@ID INT,
+@TypeName nvarchar (100)
+
+As
+BEGIN
+
+
+SELECT  Frames.FrameType, Frames.Width, Frames.IronThickness, Frames.MaterialType, SUM(Frames.tbAmount) AS Amount, PrisaSize.PRT2
+FROM            Frames INNER JOIN
+                         PrisaSize ON Frames.ID = PrisaSize.FrameID
+						 where Frames.OrderID= @ID
+GROUP BY Frames.FrameType, Frames.Width, Frames.IronThickness, Frames.MaterialType, PrisaSize.PRT2
+
+having  Frames.FrameType=@TypeName
+
+
+END
+
+USE [SharabanyOrder]
+GO
+/****** Object:  StoredProcedure [dbo].[SP_GruopPrisaSizesHeight]    Script Date: 3/25/2024 2:46:40 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROCEDURE [dbo].[SP_GruopPrisaSizesHeight]
+@ID INT,
+@TypeName nvarchar (100)
+
+As
+BEGIN
+
+
+SELECT  Frames.FrameType,  Frames.Height, Frames.IronThickness, Frames.MaterialType, SUM(Frames.tbAmount) AS Amount, PrisaSize.PRT1
+FROM            Frames INNER JOIN
+                         PrisaSize ON Frames.ID = PrisaSize.FrameID
+						 where Frames.OrderID= @ID
+GROUP BY Frames.FrameType,  Frames.Height, Frames.IronThickness, Frames.MaterialType,  PrisaSize.PRT1
+
+having  Frames.FrameType=@TypeName
+
+
+END
+

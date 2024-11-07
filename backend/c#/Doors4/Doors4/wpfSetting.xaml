@@ -1,0 +1,315 @@
+﻿<Window x:Name="wpfSettingScreen" x:Class="Doors4.wpfSetting"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Doors4"
+       
+        Height="800" 
+    Width="800"
+         WindowStartupLocation="CenterScreen"
+         WindowStyle="None"
+        ResizeMode="NoResize"
+        mc:Ignorable="d"
+        Title="{DynamicResource lang_SettingTitel}"  Loaded="wpfSettingScreen_Loaded">
+    <Grid>
+
+        <TabControl Margin="5,50,5,5" x:Name="TCSett" TabStripPlacement="Left" BorderThickness="3" Background="DarkCyan">
+            <TabItem Header="{DynamicResource lang_GeneralSetting}" FontSize="16" FontWeight="Bold">
+                <StackPanel Orientation="Vertical">
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="{DynamicResource lang_imgpathSetting}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,2,2,2" Width="300" Height="30"/>
+                        <TextBox x:Name="txtImagePath"  Width="300" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,2,2,2"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Documents Path" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,2,2,2" Width="300" Height="30"/>
+                        <TextBox x:Name="txtDocumentsPath"  Width="300" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,2,2,2"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="{DynamicResource lang_MainPrinterSetting}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,2,2,2" Width="300" Height="30" />
+                        <TextBox x:Name="txtMainPrinterName" Width="300" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,2,2,2"/>
+
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="{DynamicResource lang_StekerPrinterSetting}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,2,2,2" Width="300" Height="30"/>
+                        <TextBox x:Name="txtStikersPrinterName"   Width="300" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,2,2,2"/>
+
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Scan rotate" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="2,2,2,2" Width="300" Height="30" />
+                        <TextBox x:Name="txtScanRotate" MaxLength="3" Text="180"  Width="300" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,2,2,2"/>
+
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="{DynamicResource lang_LanguageSettings}" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="2,2,2,2" Width="300" Height="30" />
+                        <ComboBox x:Name="cbListLang" Width="300" SelectionChanged="cbListLang_SelectionChanged" SelectedIndex="0"/>
+                    </StackPanel>  
+                    
+            
+
+
+                </StackPanel>
+            </TabItem>
+
+
+            <TabItem Header="{DynamicResource lang_DatabaseSettings}" FontSize="16" FontWeight="Bold">
+                <StackPanel Orientation="Vertical"  >
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="{DynamicResource lang_IpServer}" Width="250" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,2,2,2"/>
+                        <PasswordBox x:Name="txtIPserver"   Width="150" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,2,2,2"/>
+
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="{DynamicResource lang_dbNameSettings}" Width="250" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,2,2,2"/>
+                        <PasswordBox x:Name="txtDBName" Width="150" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,2,2,2"/>
+
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="{DynamicResource lng_lblModeDB}" Width="250" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,2,2,2"/>
+                        <ComboBox x:Name="cbDBmodedb" Width="150" />
+
+
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="{DynamicResource lang_dbUserSettings}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="250" Height="30" Margin="2,2,2,2" />
+                        <PasswordBox x:Name="txtUserDB" Width="150" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,2,2,2" />
+
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="{DynamicResource lang_dbPassSetting}" Width="250" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,2,2,2" />
+                        <PasswordBox  x:Name="txtpassDB"  Width="150" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="2,2,2,2"/>
+
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="{DynamicResource langpasswordtosaveachange}" Width="250" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,2,2,2" />
+                        <PasswordBox  x:Name="txtpasssave"  Width="150" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="2,2,2,2"/>
+
+                    </StackPanel>
+
+                </StackPanel>
+            </TabItem>
+
+
+            <TabItem Header="Coloer Side" FontSize="16" FontWeight="Bold">
+                <StackPanel Orientation="Vertical"  >
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Color Name" Width="150" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,2,2,2"/>
+                        <TextBox x:Name="txtcoloName"   Width="250" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,2,2,2"/>
+
+                    </StackPanel>
+            
+         
+
+                    <StackPanel Orientation="Horizontal">
+                        <DataGrid x:Name="dgvlistColor" d:ItemsSource="{d:SampleData ItemCount=5}" 
+                  IsReadOnly="True" FontSize="24" FontWeight="Bold"   Background="#7F80DFFF" AlternatingRowBackground="#7F80DFFF" AlternationCount="2"  VerticalAlignment="Center" Height="599" Width="688" >
+
+                            <DataGrid.ContextMenu>
+                                <ContextMenu >
+                                    <MenuItem x:Name="EditColorSide" Header="{DynamicResource langEdit}" Click="EditColorSide_Click"  />
+                                    <MenuItem x:Name="DeleteColorSide" Header="{DynamicResource langDelete}" Click="DeleteColorSide_Click"  />
+                                </ContextMenu>
+                            </DataGrid.ContextMenu>
+
+
+
+                        </DataGrid>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+
+          
+
+            <TabItem Header="Amount Print" FontSize="16" FontWeight="Bold">
+                <StackPanel Orientation="Vertical"  >
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Sticker Amount Per Door Frame" Width="280" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,2,2,2"/>
+                        <TextBox x:Name="txtStickerAmountPerDoor_Frame"   Width="50" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,2,2,2"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Sticker Amount Per Door F" Width="280" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,2,2,2"/>
+                        <TextBox x:Name="txtStickerAmountPerDoor_F" Width="50" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,2,2,2"/>
+
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Sticker Amount Per Door A" HorizontalAlignment="Center" VerticalAlignment="Center" Width="280" Height="30" Margin="2,2,2,2" />
+                        <TextBox x:Name="txtStickerAmountPerDoor_A" Width="50" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,2,2,2" />
+
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Sticker Amount Per Door Alpha" HorizontalAlignment="Center" VerticalAlignment="Center" Width="280" Height="30" Margin="2,2,2,2" />
+                        <TextBox x:Name="txtStickerAmountPerDoor_Alpha" Width="50" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,2,2,2" />
+
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Sticker Amount Per Door Window" HorizontalAlignment="Center" VerticalAlignment="Center" Width="280" Height="30" Margin="2,2,2,2" />
+                        <TextBox x:Name="txtStickerAmountPerDoor_Windo" Width="50" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,2,2,2" />
+
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Sticker Amount Per Door Tris" HorizontalAlignment="Center" VerticalAlignment="Center" Width="280" Height="30" Margin="2,2,2,2" />
+                        <TextBox x:Name="txtStickerAmountPerDoor_Tris" Width="50" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,2,2,2" />
+
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="-----------------------------------------------------------------------------------------------------------------" VerticalAlignment="Center"  Height="30" Margin="2,2,2,2" Width="662" />
+
+                    </StackPanel>
+                  
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Paper Amount Per Door Frame" HorizontalAlignment="Center" VerticalAlignment="Center" Width="280" Height="30" Margin="2,2,2,2" />
+                        <TextBox x:Name="txtPaperAmountPerDoor_Frame" Width="50" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,2,2,2" />
+
+                    </StackPanel> 
+                    
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Paper Amount Per Door F" HorizontalAlignment="Center" VerticalAlignment="Center" Width="280" Height="30" Margin="2,2,2,2" />
+                        <TextBox x:Name="txtPaperAmountPerDoor_F" Width="50" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,2,2,2" />
+
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Paper Amount Per Door A" HorizontalAlignment="Center" VerticalAlignment="Center" Width="280" Height="30" Margin="2,2,2,2" />
+                        <TextBox x:Name="txtPaperAmountPerDoor_A" Width="50" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,2,2,2" />
+
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Paper Amount Per Door Alpha" HorizontalAlignment="Center" VerticalAlignment="Center" Width="280" Height="30" Margin="2,2,2,2" />
+                        <TextBox x:Name="txtPaperAmountPerDoor_Alpha" Width="50" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,2,2,2" />
+
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Paper Amount Per Door Windows" HorizontalAlignment="Center" VerticalAlignment="Center" Width="280" Height="30" Margin="2,2,2,2" />
+                        <TextBox x:Name="txtPaperAmountPerDoor_Windo" Width="50" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,2,2,2" />
+
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Paper Amount Per Door Tris" HorizontalAlignment="Center" VerticalAlignment="Center" Width="280" Height="30" Margin="2,2,2,2" />
+                        <TextBox x:Name="txtPaperAmountPerDoor_Tris" Width="50" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,2,2,2" />
+
+                    </StackPanel>
+
+                </StackPanel>
+            </TabItem>
+
+            <TabItem Header="Defult Frame" FontSize="16" FontWeight="Bold">
+                <StackPanel Orientation="Vertical"  >
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Search name or Des" Width="200" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,2,2,2"/>
+                        <TextBox x:Name="txtSearch"   Width="250" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,2,2,2"/>
+
+                    </StackPanel>
+
+
+
+                    <StackPanel Orientation="Horizontal">
+                        <DataGrid x:Name="dgvDefultFramelist" d:ItemsSource="{d:SampleData ItemCount=5}" 
+IsReadOnly="True" FontSize="24" FontWeight="Bold"   Background="#7F80DFFF" AlternatingRowBackground="#7F80DFFF" AlternationCount="2"  VerticalAlignment="Center" Height="599" Width="688" >
+                            <DataGrid.ContextMenu>
+                                <ContextMenu >
+
+                                    <MenuItem x:Name="editDF"  Header="{DynamicResource langEdit}" Click="editDF_Click"  />
+
+                                </ContextMenu>
+                            </DataGrid.ContextMenu>
+
+                            <DataGrid.Resources>
+                                <Style TargetType="{x:Type DataGridCell}">
+                                    <EventSetter Event="MouseDoubleClick" Handler="DataGridCel_MouseDoubleClick"/>
+                                </Style>
+                            </DataGrid.Resources>
+
+                        </DataGrid>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+            
+            <TabItem Header="Formica Color" FontSize="16" FontWeight="Bold">
+                <StackPanel Orientation="Vertical"  >
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Fromica Color" Width="150" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,2,2,2"/>
+                        <TextBox x:Name="txtcoloNameFormica"   Width="250" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,2,2,2"/>
+
+                    </StackPanel>
+
+
+
+                    <StackPanel Orientation="Horizontal">
+                        <DataGrid x:Name="dgvlistColorFormica" d:ItemsSource="{d:SampleData ItemCount=5}" 
+      IsReadOnly="True" FontSize="24" FontWeight="Bold"   Background="#7F80DFFF" AlternatingRowBackground="#7F80DFFF" AlternationCount="2"  VerticalAlignment="Center" Height="599" Width="688" >
+
+                            <DataGrid.ContextMenu>
+                                <ContextMenu >
+                                    <MenuItem x:Name="EditColorFormica" Header="{DynamicResource langEdit}" Click="EditColorFormica_Click"  />
+                                    <MenuItem x:Name="DeleteColorFormica" Header="{DynamicResource langDelete}" Click="DeleteColorFormica_Click"  />
+                                </ContextMenu>
+                            </DataGrid.ContextMenu>
+
+
+
+                        </DataGrid>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+
+
+            <TabItem Header="Defult Kant" FontSize="16" FontWeight="Bold">
+                <StackPanel Orientation="Vertical"  >
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Search" Width="150" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,2,2,2"/>
+                        <TextBox x:Name="txtSearchKant"   Width="250" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,2,2,2"/>
+
+                    </StackPanel>
+
+
+
+                    <StackPanel Orientation="Horizontal">
+                        <DataGrid x:Name="dgvlistKant" d:ItemsSource="{d:SampleData ItemCount=5}" 
+  IsReadOnly="True" FontSize="24" FontWeight="Bold"   Background="#7F80DFFF" AlternatingRowBackground="#7F80DFFF" AlternationCount="2"  VerticalAlignment="Center" Height="599" Width="688" >
+
+                            <DataGrid.ContextMenu>
+                                <ContextMenu >
+                                    <MenuItem x:Name="EditKant" Header="{DynamicResource langEdit}" Click="EditKant_Click"   />
+                                </ContextMenu>
+                            </DataGrid.ContextMenu>
+
+                            <DataGrid.Resources>
+                                <Style TargetType="{x:Type DataGridCell}">
+                                    <EventSetter Event="MouseDoubleClick" Handler="dgvlistKant_MouseDoubleClick"/>
+                                </Style>
+                            </DataGrid.Resources>
+
+                        </DataGrid>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+
+
+
+        <Button x:Name="btnBack" Content="{DynamicResource lang_btnBacksetting}" HorizontalAlignment="Right" VerticalAlignment="Top" Height="30" Width="100" Click="btnBack_Click" Margin="0,760,120,0"/>
+
+        <Button x:Name="btnSave" Content="{DynamicResource lang_btnSaveSetting}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="30" Width="100" Click="btnSave_Click" Margin="0,0,10,10"/>
+
+        <Popup x:Name="popTextBoxTF" Placement="Top">
+            <TextBlock  Background="Red" FontSize="20" FontWeight="Bold" Foreground="White">The connection to the database is unstable</TextBlock>
+        </Popup>
+
+        <Label x:Name="lbltitle" Content="{DynamicResource lang_SettingTitel}" VerticalAlignment="Top" Background="#FFD1C6F1" FontWeight="Bold" FontSize="36" HorizontalContentAlignment="Center" Height="50" Padding="0,0,0,0" VerticalContentAlignment="Center" />
+
+    </Grid>
+</Window>

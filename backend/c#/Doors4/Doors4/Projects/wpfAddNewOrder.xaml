@@ -1,0 +1,26 @@
+﻿<Window x:Name="wpfAddnewOrderScreen" x:Class="Doors4.wpfAddNewOrder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Doors4"
+        mc:Ignorable="d"
+           WindowStyle="None"
+  ResizeMode="NoResize"
+       Height="1080" Width="1919" Loaded="wpfAddnewOrderScreen_Loaded" WindowState="Maximized" >
+    <Grid>
+        <Popup x:Name="poptxtOrderNumber" PlacementTarget="{Binding ElementName=txtOrderNumber}"
+Placement="Top">
+            <Label  Background="Red" FontWeight="Bold" Foreground="White" Content="{DynamicResource langEnterNumberValidition}"> </Label>
+
+        </Popup>
+        <TextBox x:Name="txtOrderNumber" MaxLength="8" HorizontalAlignment="Center" Margin="0,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="600" Background="#7F80DFFF" Height="100" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36" PreviewTextInput="txtOrderNumber_PreviewTextInput"/>
+        <TextBox x:Name="txtManger" HorizontalAlignment="Center" Margin="0,270,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="600" Background="#7F80DFFF" Height="100" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36"/>
+        <Button x:Name="btnSave" Content="{DynamicResource lang_btnclose}" HorizontalAlignment="Center" Margin="0,398,0,0" VerticalAlignment="Top" Height="101" Width="300" Click="btnSave_Click" FontSize="36"/>
+        <Label Content="{DynamicResource langtxtOrderNumber}" HorizontalAlignment="Left" Margin="1265,188,0,0" VerticalAlignment="Top" Height="54" Width="164" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24"/>
+        <Label Content="{DynamicResource langtxtManger}" HorizontalAlignment="Left" Margin="1265,293,0,0" VerticalAlignment="Top" Height="54" Width="164" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24"/>
+        <Button x:Name="btnexit" Content="{DynamicResource langback}" HorizontalAlignment="Right" Margin="0,0,5,5" Width="150" RenderTransformOrigin="-0.444,0.03" Click="btnexit_Click" Height="50" VerticalAlignment="Bottom" FontSize="36"/>
+        <Label x:Name="lbltitle"  VerticalAlignment="Top" Background="#FFD1C6F1" FontWeight="Bold" FontSize="36" HorizontalContentAlignment="Center" Height="50" VerticalContentAlignment="Center" Padding="0,0,5,0" />
+
+    </Grid>
+</Window>

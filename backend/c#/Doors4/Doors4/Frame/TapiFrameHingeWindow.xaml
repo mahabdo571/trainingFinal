@@ -1,0 +1,58 @@
+﻿<Window x:Class="Door3.TapiFrameHingeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Door3"
+        mc:Ignorable="d"
+         WindowStyle="None"
+        Title="{DynamicResource langTapiFrameHingeWindow}" Height="654" Width="542" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" ShowInTaskbar="False" Loaded="Window_Loaded" Closed="Window_Closed">
+    <Grid Margin="0,0,10,10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="{DynamicResource langNumHinges}" HorizontalAlignment="Left" Margin="224,27,0,0" VerticalAlignment="Top" Height="29" Width="81"/>
+        <Label Content="{DynamicResource langFrameHight1disp}" HorizontalAlignment="Left" Margin="376,488,0,0" VerticalAlignment="Top" Height="28" Width="82"/>
+        <Label Content="{DynamicResource langH1}" HorizontalAlignment="Left" Margin="348,245,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.044,0.567" Height="32" Width="42"/>
+        <Label Content="{DynamicResource langH2}" HorizontalAlignment="Left" Margin="348,283,0,0" VerticalAlignment="Top" Height="33" Width="42"/>
+        <Label Content="{DynamicResource langH3}" HorizontalAlignment="Left" Margin="348,321,0,0" VerticalAlignment="Top" Height="33" Width="42"/>
+        <Label Content="{DynamicResource langH4}" HorizontalAlignment="Left" Margin="348,359,0,0" VerticalAlignment="Top" Height="33" Width="42"/>
+        <Label Content="{DynamicResource langH5}" HorizontalAlignment="Left" Margin="348,397,0,0" VerticalAlignment="Top" Height="33" Width="42"/>
+        <Label Content="{DynamicResource langH6}" HorizontalAlignment="Left" Margin="348,436,0,0" VerticalAlignment="Top" Height="32" Width="42"/>
+        <Label Content="{DynamicResource langtxtHeightToBottomHinge}" HorizontalAlignment="Left" Margin="94,427,0,0" VerticalAlignment="Top" Height="28" Width="147"/>
+        <Label Content="{DynamicResource langTypeHinge}" HorizontalAlignment="Left" Margin="142,142,0,0" VerticalAlignment="Top" Height="28" Width="53"/>
+        <Label Content="{DynamicResource langhingeconnection}" HorizontalAlignment="Left" Margin="135,299,0,0" VerticalAlignment="Top" Height="28" Width="66"/>
+        <Button Content="{DynamicResource lang_btnclose}" HorizontalAlignment="Center" Margin="0,564,0,0" VerticalAlignment="Top" Height="50" Width="84" FontSize="22" Background="#FF76EFFF" Click="CloseWindow"/>
+        <TextBox x:Name="NumHinges" HorizontalAlignment="Left" Margin="189,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" Height="34" FontSize="24" Background="#7F80DFFF" MaxLength="1" MaxLines="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="3" KeyUp="NumHinges_KeyUp"/>
+        <TextBox x:Name="txtHingeSize" HorizontalAlignment="Left" Margin="379,162,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="67" Height="27" FontSize="20" Background="#7F80DFFF" MaxLength="3" MaxLines="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextChanged="HingeSizeInput" LostFocus="txtHingeSize_LostFocus"/>
+        <TextBox x:Name="FrameHinge1Height" HorizontalAlignment="Left" Margin="390,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="56" Height="32" FontSize="20" Background="#7F80DFFF" MaxLength="4" MaxLines="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" KeyUp="FrameHinge1Height_KeyUp"/>
+        <TextBox x:Name="FrameHinge2Height" HorizontalAlignment="Left" Margin="390,283,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="56" Height="33" FontSize="20" Background="#7F80DFFF" MaxLength="4" MaxLines="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" KeyUp="FrameHinge2Height_KeyUp"/>
+        <TextBox x:Name="FrameHinge3Height" HorizontalAlignment="Left" Margin="390,321,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="56" Height="33" FontSize="20" Background="#7F80DFFF" MaxLength="4" MaxLines="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" KeyUp="FrameHinge3Height_KeyUp"/>
+        <TextBox x:Name="FrameHinge4Height" HorizontalAlignment="Left" Margin="390,359,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="56" Height="33" FontSize="20" Background="#7F80DFFF" MaxLength="4" MaxLines="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" KeyUp="FrameHinge4Height_KeyUp"/>
+        <TextBox x:Name="FrameHinge5Height" HorizontalAlignment="Left" Margin="390,397,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="56" Height="33" FontSize="20" Background="#7F80DFFF" MaxLength="4" MaxLines="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" KeyUp="FrameHinge5Height_KeyUp"/>
+        <TextBox x:Name="FrameHinge6Height" HorizontalAlignment="Left" Margin="390,436,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="56" Height="32" FontSize="20" Background="#7F80DFFF" MaxLength="4" MaxLines="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" KeyUp="FrameHinge6Height_KeyUp"/>
+        <Label Content="{DynamicResource langaxisposition}" HorizontalAlignment="Left" Margin="383,216,0,0" VerticalAlignment="Top" Height="29" Width="69"/>
+        <TextBox x:Name="txtHeightToBottomHinge" HorizontalAlignment="Left" Margin="128,461,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="67" Height="27" FontSize="20" Background="#7F80DFFF" MaxLength="3" MaxLines="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" LostFocus="txtHeightToBottomHinge_LostFocus"/>
+        <Label x:Name="txtHinge1" HorizontalAlignment="Left" Margin="452,245,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.044,0.567" Height="32" Background="#FFFFDADA" Width="43"/>
+        <Label x:Name="txtHinge2" HorizontalAlignment="Left" Margin="452,283,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.044,0.567" Height="33" Background="#FFFFDADA" Width="43"/>
+        <Label x:Name="txtHinge3" HorizontalAlignment="Left" Margin="452,321,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.044,0.567" Height="33" Background="#FFFFDADA" Width="43"/>
+        <Label x:Name="txtHinge4" HorizontalAlignment="Left" Margin="452,359,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.044,0.567" Height="33" Background="#FFFFDADA" Width="43"/>
+        <Label x:Name="txtHinge5" HorizontalAlignment="Left" Margin="452,397,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.044,0.567" Height="33" Background="#FFFFDADA" Width="43"/>
+        <Label x:Name="txtHinge6" HorizontalAlignment="Left" Margin="452,436,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.044,0.567" Height="32" Background="#FFFFDADA" Width="43"/>
+        <Label x:Name="FrameHight1disp" Content="0" HorizontalAlignment="Left" Margin="391,516,0,0" VerticalAlignment="Top" Width="55" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="29"/>
+        <Label Content="{DynamicResource langtxtHingeSize}" HorizontalAlignment="Left" Margin="384,133,0,0" VerticalAlignment="Top" Height="29" Width="63"/>
+        <CheckBox x:Name="UpperMidHin" Content="{DynamicResource langUpperMidHin}" HorizontalAlignment="Left" Margin="172,74,0,0" VerticalAlignment="Top" Background="White" Height="31" Width="162" Style="{StaticResource CheckBoxswitch}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" Click="UpperMidHG" Checked="UpperMidHin_Checked"  Unchecked="UpperMidHin_Unchecked">
+
+        </CheckBox>
+        <Button x:Name="btnHingeType4x4" Content="4X4" HorizontalAlignment="Left" Margin="98,170,0,0" VerticalAlignment="Top" RenderTransformOrigin="40.869,13.679" Width="57" Height="33" FontSize="18" Click="btnHingeType4x4_Click"/>
+        <Button x:Name="btnHingeType4x35" Content="4X3.5" HorizontalAlignment="Left" Margin="98,209,0,0" VerticalAlignment="Top" RenderTransformOrigin="40.869,13.679" Width="57" Height="32" FontSize="18" Click="btnHingeType4x35_Click"/>
+        <Button x:Name="btnHingeMetalM" Content="{DynamicResource langbtnHingeMetalM}" HorizontalAlignment="Left" Margin="160,170,0,0" VerticalAlignment="Top" RenderTransformOrigin="40.869,13.679" Width="71" Height="33" FontSize="16" Click="btnHingeMetalM_Click"/>
+        <Button x:Name="btnHingeMetalN" Content="{DynamicResource langbtnHingeMetalN}" HorizontalAlignment="Left" Margin="160,209,0,0" VerticalAlignment="Top" RenderTransformOrigin="40.869,13.679" Width="71" Height="32" FontSize="16" Click="btnHingeMetalN_Click"/>
+        <Button x:Name="btnHingeConnectionSoldering" Content="{DynamicResource langbtnHingeConnectionSoldering}" HorizontalAlignment="Left" Margin="168,328,0,0" VerticalAlignment="Top" RenderTransformOrigin="40.869,13.679" Width="71" Height="32" FontSize="16" Click="btnHingeConnectionSoldering_Click"/>
+        <Button x:Name="btnHingeConnectionHole" Content="{DynamicResource langbtnHingeConnectionHole}" HorizontalAlignment="Left" Margin="92,328,0,0" VerticalAlignment="Top" RenderTransformOrigin="40.869,13.679" Width="70" Height="32" FontSize="16" Click="btnHingeConnectionHole_Click"/>
+        <CheckBox x:Name="cbNoCalc" Content="{DynamicResource langcbHingeNoCalc}" HorizontalAlignment="Left" Margin="172,113,0,0" VerticalAlignment="Top" Background="White" Height="31" Width="162" Style="{StaticResource CheckBoxswitch}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" Checked="cbNoCalc_Checked" Unchecked="cbNoCalc_Unchecked"  />
+        <Button Content="Reset" HorizontalAlignment="Left" Margin="432,564,0,0" VerticalAlignment="Top" Height="45" Width="66" Click="Button_Click"/>
+        <Button Content="back data" x:Name="btnbackdata" Visibility="Hidden" HorizontalAlignment="Left" Margin="346,564,0,0" VerticalAlignment="Top" Height="45" Width="66" Click="btnbackdata_Click"/>
+
+    </Grid>
+</Window>

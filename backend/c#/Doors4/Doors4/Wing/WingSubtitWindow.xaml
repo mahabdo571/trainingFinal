@@ -1,0 +1,95 @@
+﻿<Window x:Name="windos" x:Class="Doors4.Wing.WingSubtitWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Doors4.Wing"
+        mc:Ignorable="d"
+        Title="{DynamicResource lang_WingSubtitWindow}" Height="800" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Loaded="windos_Loaded">
+    <Grid>
+        <Button x:Name="btnClose" Content="{DynamicResource lang_btnclose}" HorizontalAlignment="Center" Margin="0,672,0,0" VerticalAlignment="Top" Height="50" Width="84" FontSize="22" Background="#FF76EFFF" Click="CloseWindow"/>
+        <Grid HorizontalAlignment="Left" Height="175" Margin="458,26,0,0" VerticalAlignment="Top" Width="262">
+            <Label Content="{DynamicResource langWinType}" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16"/>
+            <Rectangle HorizontalAlignment="Center" Height="144" Stroke="Black" VerticalAlignment="Top" Width="262" Margin="0,31,0,0"/>
+            <Button x:Name="btnWinTypeNoWin" Content="{DynamicResource langbtnWinTypeNoWin}"           HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Height="40" Background="#FF76EFFF" FontSize="20" Margin="178,36,0,0" Click="btnSaveDB" Tag="NoWin"/>
+            <Button x:Name="btnWinTypeTsohar" Content="{DynamicResource langbtnWinTypeTsohar}"     HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Height="40" Background="#FF76EFFF" FontSize="20" Margin="8,37,0,0" Click="btnSaveDB" Tag="Tsohar"/>
+            <Button x:Name="btnWinTypeNormal" Content="{DynamicResource langbtnWinTypeNormal}"    HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Height="40" Background="#FF76EFFF" FontSize="20" Margin="93,37,0,0" Click="btnSaveDB" Tag="Normal"/>
+            <Button x:Name="btnWinTypeMtstson" Content="{DynamicResource langbtnWinTypeMtstson}"   HorizontalAlignment="Left" Margin="93,81,0,0" VerticalAlignment="Top" Width="80" Height="40" Background="#FF76EFFF" FontSize="20" Click="btnSaveDB" Tag="Mtstson"/>
+            <Button x:Name="btnWinTypeBalon" Content="{DynamicResource langbtnWinTypeBalon}"   HorizontalAlignment="Left" Margin="178,81,0,0" VerticalAlignment="Top" Width="80" Height="40" Background="#FF76EFFF" FontSize="20" Click="btnSaveDB" Tag="Balon"/>
+            <Button x:Name="btnWinTypeStar" Content="{DynamicResource langbtnWinTypeStar}"   HorizontalAlignment="Left" Margin="178,126,0,0" VerticalAlignment="Top" Width="80" Height="40" Background="#FF76EFFF" FontSize="20" Click="btnSaveDB" Tag="Star"/>
+            <Button x:Name="btnWinTypeOld" Content="{DynamicResource langbtnWinTypeOld}"  HorizontalAlignment="Left" Margin="8,81,0,0" VerticalAlignment="Top" Width="80" Height="40" Background="#FF76EFFF" FontSize="11" Click="btnSaveDB" Tag="Old"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="84" Margin="241,26,0,0" VerticalAlignment="Top" Width="194">
+            <Label Content="{DynamicResource langGlassType}" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16"/>
+            <Rectangle HorizontalAlignment="Center" Height="55" Margin="0,29,0,0" Stroke="Black" VerticalAlignment="Top" Width="194"/>
+            <Button x:Name="btnGlassTypeClear" Content="{DynamicResource langbtnGlassTypeClear}"    HorizontalAlignment="Left" Margin="104,36,0,0" VerticalAlignment="Top" Width="80" Height="40" Background="#FF76EFFF" FontSize="20" Click="btnSaveDB" Tag="Clear"/>
+            <Button x:Name="btnGlassTypeMilky" Content="{DynamicResource langbtnGlassTypeMilky}"    HorizontalAlignment="Left" Margin="14,36,0,0" VerticalAlignment="Top" Width="80" Height="40" Background="#FF76EFFF" FontSize="20" Click="btnSaveDB" Tag="Milky"/>
+        </Grid>
+        <Label Content="{DynamicResource langtrisType}" HorizontalAlignment="Left" Margin="596,415,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="554,446,0,0">
+            <Rectangle HorizontalAlignment="Left" Height="103" Stroke="Black" VerticalAlignment="Center" Width="225" Margin="-31,0,0,0"/>
+            <Button x:Name="btnTrisTypeNoTris" Content="{DynamicResource langbtnTrisTypeNoTris}"          HorizontalAlignment="Left" Margin="104,8,0,0" VerticalAlignment="Top" Width="80" Height="40" Background="#FF76EFFF" FontSize="20" Click="btnSaveDB" Tag="NoTris"/>
+            <Button x:Name="btnTrisTypeWood" Content="{DynamicResource langbtnTrisTypeWood}"          HorizontalAlignment="Left" Margin="2,8,0,0" VerticalAlignment="Top" Width="80" Height="40" Background="#FF76EFFF" FontSize="20" Click="btnSaveDB" Tag="Wood"/>
+            <Button x:Name="btnTrisTypeAlminuom" Content="{DynamicResource langbtnTrisTypeAlminuom}"   HorizontalAlignment="Left" Margin="104,54,0,0" VerticalAlignment="Top" Width="80" Height="40" Background="#FF76EFFF" FontSize="18" Click="btnSaveDB" Tag="Alminuom"/>
+            <Button x:Name="btnTrisTypeSlots" Content="{DynamicResource langbtnTrisTypeSlots}"      HorizontalAlignment="Left" Margin="-19,54,0,0" VerticalAlignment="Top" Width="113" Height="40" Background="#FF76EFFF" FontSize="20" Click="btnSaveDB" Tag="Slots"/>
+        </Grid>
+        <Label x:Name="btnOpeningDirection" Content="{DynamicResource langTrisDirction}" HorizontalAlignment="Left" Margin="594,561,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Rectangle HorizontalAlignment="Left" Height="55" Margin="540,592,0,0" Stroke="Black" VerticalAlignment="Top" Width="194"/>
+        <Button x:Name="btnOpeningDirectionIn" Content="{DynamicResource langbtnOpeningDirectionIn}"    HorizontalAlignment="Left" Margin="644,600,0,0" VerticalAlignment="Top" Width="80" Height="40" Background="#FF76EFFF" FontSize="20" Click="btnSaveDB" Tag="In"/>
+        <Button x:Name="btnOpeningDirectionOut" Content="{DynamicResource langbtnOpeningDirectionOut}"     HorizontalAlignment="Left" Margin="554,600,0,0" VerticalAlignment="Top" Width="80" Height="40" Background="#FF76EFFF" FontSize="20" Click="btnSaveDB" Tag="Out"/>
+        <Label Content="{DynamicResource langtxtWindowHeight}" HorizontalAlignment="Left" Margin="668,210,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="{DynamicResource langtxtWindowWidth}" HorizontalAlignment="Left" Margin="491,210,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="{DynamicResource langtxtCircleDiameter}" HorizontalAlignment="Left" Margin="81,37,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="{DynamicResource langtxtWindowPositionFromHandle}" HorizontalAlignment="Left" Margin="54,205,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="{DynamicResource langtxtWindowPositionFromAbove}" HorizontalAlignment="Left" Margin="267,205,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="{DynamicResource langtxtCircleLocationFromBottom}" HorizontalAlignment="Left" Margin="274,125,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="txtWindowHeight" HorizontalAlignment="Right" Margin="0,241,35,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="40" FontSize="24" HorizontalContentAlignment="Center" Background="#7F80DFFF" MaxLength="4" VerticalContentAlignment="Center" KeyUp="txtSaveDB"/>
+        <TextBox x:Name="txtWindowWidth" HorizontalAlignment="Right" Margin="0,241,207,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="40" FontSize="24" HorizontalContentAlignment="Center" Background="#7F80DFFF" MaxLength="4" VerticalContentAlignment="Center" KeyUp="txtSaveDB"/>
+        <TextBox x:Name="txtCircleDiameter" HorizontalAlignment="Right" Margin="0,68,623,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="40" FontSize="24" HorizontalContentAlignment="Center" Background="#7F80DFFF" MaxLength="4" VerticalContentAlignment="Center" Text="427" KeyUp="txtSaveDB"/>
+        <TextBox x:Name="txtCircleLocationFromBottom" HorizontalAlignment="Right" Margin="0,161,400,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="40" FontSize="24" HorizontalContentAlignment="Center" Background="#7F80DFFF" MaxLength="4" VerticalContentAlignment="Center" KeyUp="txtSaveDB"/>
+        <TextBox x:Name="txtWindowPositionFromAbove" HorizontalAlignment="Right" Margin="0,241,400,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="40" FontSize="24" HorizontalContentAlignment="Center" Background="#7F80DFFF" MaxLength="4" VerticalContentAlignment="Center" KeyUp="txtSaveDB" RenderTransformOrigin="1.108,0.401"/>
+        <TextBox x:Name="txtWindowPositionFromHandle" HorizontalAlignment="Right" Margin="0,241,623,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="40" FontSize="24" HorizontalContentAlignment="Center" Background="#7F80DFFF" MaxLength="4" VerticalContentAlignment="Center" KeyUp="txtSaveDB"/>
+        <Label Content="{DynamicResource langtxtTrisHeight}" HorizontalAlignment="Left" Margin="390,428,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="{DynamicResource langtxtTrisWidth}" HorizontalAlignment="Left" Margin="256,428,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="txtTrisHeight" HorizontalAlignment="Right" Margin="0,458,309,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="40" FontSize="24" HorizontalContentAlignment="Center" Background="#7F80DFFF" MaxLength="4" VerticalContentAlignment="Center" RenderTransformOrigin="1.367,1.451" KeyUp="txtSaveDB"/>
+        <TextBox x:Name="txtTrisWidth" HorizontalAlignment="Right" Margin="0,458,439,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="40" FontSize="24" HorizontalContentAlignment="Center" Background="#7F80DFFF" MaxLength="4" VerticalContentAlignment="Center" KeyUp="txtSaveDB" RenderTransformOrigin="2.067,0.551"/>
+        <Label Content="{DynamicResource langtxtTrisPositionFromBottom}" HorizontalAlignment="Left" Margin="30,427,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="txtTrisPositionFromBottom" HorizontalAlignment="Right" Margin="0,458,636,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="40" FontSize="24" HorizontalContentAlignment="Center" Background="#7F80DFFF" MaxLength="4" VerticalContentAlignment="Center" KeyUp="txtSaveDB"/>
+        <Label Content="{DynamicResource langtxtTrisPositionFromAbove}" HorizontalAlignment="Left" Margin="36,503,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <TextBox x:Name="txtTrisPositionFromAbove" HorizontalAlignment="Right" Margin="0,532,636,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="40" FontSize="24" HorizontalContentAlignment="Center" Background="#7F80DFFF" MaxLength="4" VerticalContentAlignment="Center" KeyUp="txtSaveDB" RenderTransformOrigin="-0.217,1.401"/>
+        <Label Content="{DynamicResource langtxtTrisPositionFromHandle}" HorizontalAlignment="Left" Margin="312,533,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.387"/>
+                    <TranslateTransform X="-0.136"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <TextBox x:Name="txtTrisPositionFromHandle" HorizontalAlignment="Right" Margin="0,562,369,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="40" FontSize="24" HorizontalContentAlignment="Center" Background="#7F80DFFF" MaxLength="4" VerticalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" KeyUp="txtSaveDB">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.387"/>
+                    <TranslateTransform X="0.098" Y="-0.002"/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <Label Content="___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________" HorizontalAlignment="Left" Margin="0,338,0,0" VerticalAlignment="Top" Width="790"/>
+
+        <CheckBox x:Name="cbwindoInCenter"  Content="{DynamicResource WindoInThCenter}" Style="{StaticResource CheckBoxswitch}" HorizontalAlignment="Left" Margin="44,286,0,0" VerticalAlignment="Top" Unloaded="cbwindoInCenter_Unloaded" Unchecked="cbwindoInCenter_Unchecked" Checked="cbwindoInCenter_Checked" FontSize="20" VerticalContentAlignment="Center" FontWeight="Bold" Height="34" Width="164">
+
+        </CheckBox>
+
+        <CheckBox x:Name="cbTrisInCenter"  Content="{DynamicResource TrisInThCenter}" Style="{StaticResource CheckBoxswitch}" HorizontalAlignment="Left" Margin="298,608,0,0" VerticalAlignment="Top" Checked="cbTrisInCenter_Checked" Unchecked="cbTrisInCenter_Unchecked" FontSize="16" VerticalContentAlignment="Center" Width="133" Height="32">
+
+        </CheckBox>
+        <CheckBox x:Name="cbAorHole" Style="{StaticResource CheckBoxswitch}" Content="{DynamicResource langbtnWinTypeAor}" HorizontalAlignment="Left"  Margin="473,154,0,0" VerticalAlignment="Top" Checked="cbAorHole_Checked" Unchecked="cbAorHole_Unchecked" Height="42" Width="142" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+
+        </CheckBox>
+        <Button Content="Reset" x:Name="btnRest" HorizontalAlignment="Left" Margin="720,710,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.22,0.561" Height="32" Width="49" Click="btnRest_Click"/>
+        <Button Content="Back Data" x:Name="btnBack" Visibility="Hidden" HorizontalAlignment="Left" Margin="632,710,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.22,0.561" Height="32" Width="64" Click="btnBack_Click"/>
+    </Grid>
+</Window>

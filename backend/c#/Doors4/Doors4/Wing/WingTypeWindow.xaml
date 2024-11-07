@@ -1,0 +1,36 @@
+﻿<Window x:Class="Doors4.Wing.WingTypeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Doors4.Wing"
+        mc:Ignorable="d"
+        Title="{DynamicResource langWingTypeWindow}" Height="800" Width="600" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="#FFE2E2E2">
+    <Grid>
+        <Button x:Name="btnSave"   TabIndex="15" Content="{DynamicResource lang_btnclose}" HorizontalAlignment="Center" Margin="0,672,0,0" VerticalAlignment="Top" Height="50" Width="84" FontSize="22" Background="#FF76EFFF" Click="CloseWindow"/>
+        <Label Content="{DynamicResource langGroupWing}" HorizontalAlignment="Center" Margin="0,23,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Rectangle HorizontalAlignment="Center" Height="142" Margin="0,53,0,0" Stroke="Black" VerticalAlignment="Top" Width="262"/>
+        <Button x:Name="btnTest1_Normal" TabIndex="0" Content="{DynamicResource langbtnTest1_Normal}"    HorizontalAlignment="Left" Margin="345,59,0,0" VerticalAlignment="Top" Width="80" Height="40" Background="#FF76EFFF" FontSize="20" Click="btnSaveDB"/>
+        <Button x:Name="btnTest1_Alpha"  TabIndex="1" Content="{DynamicResource langbtnTest1_Alpha}"     HorizontalAlignment="Center" Margin="0,59,0,0" VerticalAlignment="Top" Width="80" Height="40" Background="#FF76EFFF" FontSize="20" Click="btnSaveDB"/>
+        <Button x:Name="btnTest1_Pivot"  TabIndex="3" Content="{DynamicResource langbtnTest1_Pivot}"    HorizontalAlignment="Left" Margin="345,103,0,0" VerticalAlignment="Top" Width="80" Height="40" Background="#FF76EFFF" FontSize="20" Click="btnSaveDB"/>
+        <Button x:Name="btnTest1_Pendl"  TabIndex="4" Content="{DynamicResource langbtnTest1_Pendl}"     HorizontalAlignment="Center" Margin="0,103,0,0" VerticalAlignment="Top" Width="80" Height="40" Background="#FF76EFFF" FontSize="20" Click="btnSaveDB"/>
+        <Label Content="{DynamicResource langTypeWing}" HorizontalAlignment="Center" Margin="0,248,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Rectangle HorizontalAlignment="Center" Height="55" Margin="0,279,0,0" Stroke="Black" VerticalAlignment="Top" Width="194"/>
+        <Button x:Name="btnTest2_F"  TabIndex="8" Content="{DynamicResource langbtnTest2_F}"  HorizontalAlignment="Left" Margin="305,284,0,0" VerticalAlignment="Top" Width="80" Height="40" Background="#FF76EFFF" FontSize="20" Click="btnSaveDB"/>
+        <Button x:Name="btnTest2_A"   TabIndex="9" Content="{DynamicResource langbtnTest2_A}"  HorizontalAlignment="Left" Margin="215,284,0,0" VerticalAlignment="Top" Width="80" Height="40" Background="#FF76EFFF" FontSize="20" Click="btnSaveDB"/>
+        <Label Content="{DynamicResource langTypeKant}" HorizontalAlignment="Left" Margin="266,400,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Rectangle HorizontalAlignment="Center" Height="104" Margin="0,441,0,0" Stroke="Black" VerticalAlignment="Top" Width="194"/>
+        <Button x:Name="btnTest3_Samoe"  TabIndex="10" Content="{DynamicResource langbtnTest3_Samoe}"     HorizontalAlignment="Left" Margin="305,447,0,0" VerticalAlignment="Top" Width="80" Height="40" Background="#FF76EFFF" FontSize="20" Click="btnSaveDB"/>
+        <Button x:Name="btnTest3_jaloe3"  TabIndex="11" Content="{DynamicResource langbtnTest3_jaloe3}"  HorizontalAlignment="Left" Margin="215,447,0,0" VerticalAlignment="Top" Width="80" Height="40" Background="#FF76EFFF" FontSize="20" Click="btnSaveDB"/>
+        <Button x:Name="btnTest3_jaloe4"   TabIndex="13" Content="{DynamicResource langbtnTest3_jaloe4}"  HorizontalAlignment="Left" Margin="215,493,0,0" VerticalAlignment="Top" Width="80" Height="40" Background="#FF76EFFF" FontSize="20" Click="btnSaveDB"/>
+        <Button x:Name="btnTest3_Medic"  TabIndex="12" Content="{DynamicResource langbtnTest3_Medic}"     HorizontalAlignment="Left" Margin="305,492,0,0" VerticalAlignment="Top" Width="80" Height="40" Background="#FF76EFFF" FontSize="20" Click="btnSaveDB"/>
+        <Button x:Name="btnTest4_Flash"  TabIndex="2" Content="{DynamicResource langbtnTest4_Flash}"           HorizontalAlignment="Left" Margin="175,59,0,0" VerticalAlignment="Top" Width="80" Height="40" Background="#FF76EFFF" FontSize="20" Click="btnSaveDB"/>
+        <Button x:Name="btnTest4_acustic60"  TabIndex="6" Content="{DynamicResource langbtnTest4_acustic60}"  HorizontalAlignment="Left" Margin="321,148,0,0" VerticalAlignment="Top" Width="104" Height="40" Background="#FF76EFFF" FontSize="20" Click="btnSaveDB"/>
+        <Button x:Name="btnTest4_acustic80"  TabIndex="7" Content="{DynamicResource langbtnTest4_acustic80}"  HorizontalAlignment="Left" Margin="175,148,0,0" VerticalAlignment="Top" Width="112" Height="40" Background="#FF76EFFF" FontSize="20" Click="btnSaveDB"/>
+        <Label x:Name="NameType" HorizontalAlignment="Center" Margin="0,622,0,0" VerticalAlignment="Top" Height="45" Width="320" Background="#FFD89090" FontSize="18" FontWeight="Bold"/>
+        <Button x:Name="btnrest" Content="Reset"  TabIndex="14" HorizontalAlignment="Left" Margin="475,739,0,10" Width="77" Click="Button_Click"/>
+        <Button x:Name="btnZaza"  TabIndex="5" Content="הזזה" Background="#FF76EFFF"  HorizontalAlignment="Left" Margin="175,103,0,0" FontSize="20" Click="btnSaveDB" VerticalAlignment="Top" Height="40" Width="80"/>
+        <Button x:Name="btnback" Content="Back Data" Visibility="Hidden"  TabIndex="14" HorizontalAlignment="Left" Margin="364,739,0,10" Width="77" Click="btnback_Click" />
+
+    </Grid>
+</Window>
