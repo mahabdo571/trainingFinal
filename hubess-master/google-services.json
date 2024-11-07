@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "744615717720",
+    "project_id": "escapehub-d3866",
+    "storage_bucket": "escapehub-d3866.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744615717720:android:15dbd5f45dac25f508532d",
+        "android_client_info": {
+          "package_name": "com.EscapeHub.androidApp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB42NhcOQ9BACr0wpDsVwc7hxQbaS2sT1o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
