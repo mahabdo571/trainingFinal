@@ -44,8 +44,6 @@ class _ExamPageState extends State<ExamPage> {
 
     setState(() {
       if (whatUserPicked == correctAnswer) {
-    
-
         answerResult.add(
           const Padding(
             padding: EdgeInsets.all(3.0),
@@ -55,9 +53,8 @@ class _ExamPageState extends State<ExamPage> {
             ),
           ),
         );
-            coorectAnswer++;
+        coorectAnswer++;
       } else {
-    
         answerResult.add(
           const Padding(
             padding: EdgeInsets.all(3.0),
@@ -67,7 +64,7 @@ class _ExamPageState extends State<ExamPage> {
             ),
           ),
         );
-            wrngAnswer++;
+        wrngAnswer++;
       }
 
       appBrain.isFinshed() ? getAlartIfFinshed() : appBrain.nextQustion();
@@ -96,7 +93,7 @@ class _ExamPageState extends State<ExamPage> {
     appBrain.reset();
     answerResult = [];
     coorectAnswer = 0;
-    wrngAnswer=0;
+    wrngAnswer = 0;
   }
 
   @override
