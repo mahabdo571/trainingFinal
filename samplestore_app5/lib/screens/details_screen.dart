@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:samplestore_app5/constans.dart';
+import 'package:samplestore_app5/models/prroduct.dart';
 import 'package:samplestore_app5/widget/datails/datails_body.dart';
 
 class DetailsScreen extends StatelessWidget {
-  const DetailsScreen({super.key});
+  const DetailsScreen({super.key, required this.product});
+  final Product product;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kPrimeryColor,
       appBar: detailsAppBar(context),
-      body: DatailsBody(),
+      body: DatailsBody(product: product),
     );
   }
 
