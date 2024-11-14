@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:samplestore_app5/constans.dart';
 import 'package:samplestore_app5/models/prroduct.dart';
+import 'package:samplestore_app5/screens/details_screen.dart';
 import 'package:samplestore_app5/widget/prodect_card.dart';
 
 class HomeBody extends StatelessWidget {
@@ -33,7 +34,15 @@ class HomeBody extends StatelessWidget {
                   itemBuilder: (context, index) => ProdectCard(
                     itemindex: index,
                     product: products[index],
-                    press: () {},
+                    press: () {
+                       Navigator.push(
+                        context,
+                         MaterialPageRoute(
+                          builder: (context) =>const DetailsScreen(),
+                          ),
+                          );
+                          
+                          },
                   ),
                 ),
               ],

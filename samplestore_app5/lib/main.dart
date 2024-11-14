@@ -4,7 +4,7 @@ import 'package:samplestore_app5/constans.dart';
 import 'package:samplestore_app5/screens/home_screen.dart';
 
 void main() {
-  runApp(MainApp());
+  runApp(const MainApp());
 }
 
 class MainApp extends StatelessWidget {
@@ -20,7 +20,7 @@ class MainApp extends StatelessWidget {
         colorScheme:
             ColorScheme.fromSwatch().copyWith(secondary: kScandryColor),
       ),
-      home: HomeScreen(),
+      home:const HomeScreen(),
     );
   }
 }
