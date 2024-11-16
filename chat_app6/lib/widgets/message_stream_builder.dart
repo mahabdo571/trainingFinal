@@ -34,17 +34,14 @@ class MessageStreamBuilder extends StatelessWidget {
         }
 
         return Expanded(
-         
-           
-            child: ListView(
-              reverse: true,
-               padding: const EdgeInsets.symmetric(
+          child: ListView(
+            reverse: true,
+            padding: const EdgeInsets.symmetric(
               horizontal: 10,
               vertical: 20,
             ),
-              children: messageWidgets,
-            ),
-          
+            children: messageWidgets,
+          ),
         );
       },
     );

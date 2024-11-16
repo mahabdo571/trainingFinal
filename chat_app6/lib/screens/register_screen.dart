@@ -1,5 +1,7 @@
+import 'package:chat_app6/screens/chat_list.dart';
 import 'package:chat_app6/screens/chat_screen.dart';
 import 'package:chat_app6/widgets/my_btn.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
@@ -111,11 +113,22 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   });
 
                   try {
-                    await _auth.createUserWithEmailAndPassword(
+                    final regNewUser =
+                        await _auth.createUserWithEmailAndPassword(
                       email: email,
                       password: password,
                     );
-                    Navigator.pushNamed(context, ChatScreen.screenRout);
+
+                    if (regNewUser.user != null) {
+                      await FirebaseFirestore.instance.collection('users').add({
+                        'userId': regNewUser.user?.uid,
+                        'email': email,
+                      });
+                      Navigator.pushNamed(context, ChatList.screenRout);
+                    } else {
+                      print('error');
+                    }
+
                     setState(() {
                       showSpinner = false;
                     });

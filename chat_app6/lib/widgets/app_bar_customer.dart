@@ -1,3 +1,4 @@
+import 'package:chat_app6/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -6,9 +7,11 @@ class AppBarCustomer extends StatelessWidget implements PreferredSizeWidget {
   final _auth = FirebaseAuth.instance;
 
   AppBarCustomer({required this.titleApp});
+  late String userEmail = '';
 
   @override
   Widget build(BuildContext context) {
+    userEmail = '${_auth.currentUser?.email}';
     return AppBar(
       backgroundColor: Colors.yellow[900],
       title: Row(
@@ -21,7 +24,7 @@ class AppBarCustomer extends StatelessWidget implements PreferredSizeWidget {
             width: 10,
           ),
           Text(
-            '$titleApp',
+            '$titleApp  hi ${RegExp(r"^[^@]+").stringMatch(userEmail)}',
             style: const TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.w900,
@@ -34,8 +37,9 @@ class AppBarCustomer extends StatelessWidget implements PreferredSizeWidget {
           onPressed: () async {
             await _auth.signOut();
             Navigator.pop(context);
+            Navigator.pushNamed(context, WelcomeScreen.screenRout);
           },
-          icon: const Icon(Icons.close),
+          icon: const Icon(Icons.exit_to_app),
         )
       ],
     );

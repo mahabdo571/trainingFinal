@@ -27,13 +27,13 @@ class MainApp extends StatelessWidget {
       // home: WelcomeScreen(),
       initialRoute: _auth.currentUser == null
           ? WelcomeScreen.screenRout
-          : ChatScreen.screenRout,
+          : ChatList.screenRout,
       routes: {
         WelcomeScreen.screenRout: (w) => WelcomeScreen(),
         SignInScreen.screenRout: (s) => SignInScreen(),
         RegisterScreen.screenRout: (r) => RegisterScreen(),
         ChatScreen.screenRout: (c) => ChatScreen(),
-        ChatList.screenRout: (c) => ChatScreen(),
+        ChatList.screenRout: (c) => ChatList(),
       },
     );
   }

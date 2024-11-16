@@ -1,4 +1,3 @@
-
 import 'package:chat_app6/widgets/app_bar_customer.dart';
 import 'package:chat_app6/widgets/message_stream_builder.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -19,7 +18,6 @@ class _ChatScreenState extends State<ChatScreen> {
   final messageTextController = TextEditingController();
   final _fireStore = FirebaseFirestore.instance;
   final _auth = FirebaseAuth.instance;
-
   String? messageText;
 
   @override
@@ -42,6 +40,11 @@ class _ChatScreenState extends State<ChatScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final arguments = (ModalRoute.of(context)?.settings.arguments ??
+        <dynamic, dynamic>{}) as Map;
+
+    print('ssssss ${arguments['data'].sender}');
+
     return Scaffold(
       appBar: AppBarCustomer(titleApp: 'Caht App'),
       body: SafeArea(
@@ -108,4 +111,3 @@ class _ChatScreenState extends State<ChatScreen> {
     );
   }
 }
-
