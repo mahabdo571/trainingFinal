@@ -1,3 +1,4 @@
+import 'package:chat_app6/screens/chat_list.dart';
 import 'package:chat_app6/screens/chat_screen.dart';
 import 'package:chat_app6/screens/register_screen.dart';
 import 'package:chat_app6/screens/signin_screen.dart';
@@ -32,6 +33,7 @@ class MainApp extends StatelessWidget {
         SignInScreen.screenRout: (s) => SignInScreen(),
         RegisterScreen.screenRout: (r) => RegisterScreen(),
         ChatScreen.screenRout: (c) => ChatScreen(),
+        ChatList.screenRout: (c) => ChatScreen(),
       },
     );
   }
