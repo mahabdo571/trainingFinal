@@ -23,7 +23,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'ChatApp',
+      title: 'Chat',
       // home: WelcomeScreen(),
       initialRoute: _auth.currentUser == null
           ? WelcomeScreen.screenRout

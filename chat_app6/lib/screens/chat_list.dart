@@ -1,6 +1,5 @@
 import 'package:chat_app6/widgets/app_bar_customer.dart';
 import 'package:chat_app6/widgets/list_chat_build.dart';
-import 'package:chat_app6/widgets/message_stream_builder.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -111,7 +110,6 @@ class _ChatListState extends State<ChatList> {
 
   void searchUserByEmail(String email) async {
     if (email != _auth.currentUser?.email) {
-      print('tesssss');
       try {
         final querySnapshot = await _fireStore
             .collection('users')
@@ -133,8 +131,6 @@ class _ChatListState extends State<ChatList> {
   }
 
   void _addFrind(var data) async {
-    print('User foundwww: ${await getIdDocCurrentUser()}');
-
     await _fireStore
         .collection('users')
         .doc(await getIdDocCurrentUser())
@@ -154,7 +150,11 @@ class _ChatListState extends State<ChatList> {
           .get();
 
       if (querySnapshot.docs.isNotEmpty) {
-        currentUserDocId = querySnapshot.docs[0].id;
+        if (currentUserDocId.isEmpty) {
+          setState(() {
+            currentUserDocId = querySnapshot.docs[0].id;
+          });
+        }
         return querySnapshot.docs[0].id;
       }
     } catch (e) {
@@ -167,6 +167,7 @@ class _ChatListState extends State<ChatList> {
   @override
   Widget build(BuildContext context) {
     getIdDocCurrentUser();
+
     return Scaffold(
       appBar: AppBarCustomer(titleApp: 'Chats'),
       body: SafeArea(

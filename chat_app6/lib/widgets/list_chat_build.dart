@@ -1,12 +1,12 @@
 import 'package:chat_app6/screens/chat_screen.dart';
 import 'package:chat_app6/widgets/message_line.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+
 import 'package:flutter/material.dart';
 
 class ListChatBuild extends StatelessWidget {
   final _fireStore = FirebaseFirestore.instance;
-  final _auth = FirebaseAuth.instance;
+
   ListChatBuild({
     super.key,
     required this.currentUserDocId,
@@ -16,11 +16,12 @@ class ListChatBuild extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print('gfgfgfgfd-- $currentUserDocId');
     return StreamBuilder<QuerySnapshot>(
       stream: _fireStore
           .collection('users')
-          // .doc(currentUserDocId)
-          .doc('QGRXqze0xTkuQdivo5I4')
+          .doc(currentUserDocId)
+          //.doc('QGRXqze0xTkuQdivo5I4')
           .collection('Contacts')
           .snapshots(),
       builder: (context, snapshot) {
@@ -56,6 +57,8 @@ class ListChatBuild extends StatelessWidget {
                       Navigator.pushNamed(context, ChatScreen.screenRout,
                           arguments: {
                             'data': messageWidgets[index],
+                            'currentUserDocId': currentUserDocId,
+                            'ReceiverId': messageWidgets.first.sender,
                           });
                     },
                     child: ListTile(
