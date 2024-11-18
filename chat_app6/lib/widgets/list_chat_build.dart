@@ -16,7 +16,7 @@ class ListChatBuild extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print('gfgfgfgfd-- $currentUserDocId');
+   
     return StreamBuilder<QuerySnapshot>(
       stream: _fireStore
           .collection('users')

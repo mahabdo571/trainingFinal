@@ -4,42 +4,55 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-class MessageStreamBuilder extends StatelessWidget {
-  MessageStreamBuilder({
+class MessageStreamBuilder extends StatefulWidget {
+  const MessageStreamBuilder({
     super.key,
     required FirebaseFirestore fireStore,
     required this.arguments,
   }) : _fireStore = fireStore;
   final dynamic arguments;
   final FirebaseFirestore _fireStore;
+
+  @override
+  State<MessageStreamBuilder> createState() => _MessageStreamBuilderState();
+}
+
+class _MessageStreamBuilderState extends State<MessageStreamBuilder> {
   final _auth = FirebaseAuth.instance;
+
+  late String? roomId='';
 
   void getIdDocUser() async {
     DocumentReference? roomRef;
-    final querySnapshot = await _fireStore
+    final querySnapshot = await widget._fireStore
         .collection('users')
-        .doc(arguments['currentUserDocId'])
+        .doc(widget.arguments['currentUserDocId'])
         .collection('rooms')
         .where('SenderId', isEqualTo: _auth.currentUser?.uid)
-        .where('ReceiverId', isEqualTo: arguments['ReceiverId'])
+        .where('ReceiverId', isEqualTo: widget.arguments['ReceiverId'])
         .get();
 
     if (querySnapshot.docs.isNotEmpty) {
       roomRef = querySnapshot.docs.first.reference;
-
-      print('room - ${roomRef.id}');
+      if (roomId == '') {
+        setState(() {
+          roomId = roomRef?.id;
+        });
+      }
     }
   }
 
   @override
   Widget build(BuildContext context) {
     getIdDocUser();
+
+   
     return StreamBuilder<QuerySnapshot>(
-      stream: _fireStore
+      stream: widget._fireStore
           .collection('users')
-          .doc('drQfkNdDGHQFqehFjCvH')
+          .doc(widget.arguments['currentUserDocId'])
           .collection('rooms')
-          .doc('wHxnkXL6YZtYebPqaXL2')
+          .doc(roomId)
           .collection('messages')
           .orderBy('time')
           .snapshots(),
