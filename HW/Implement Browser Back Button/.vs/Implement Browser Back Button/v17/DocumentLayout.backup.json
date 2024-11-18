@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\devlop\\dev\\trainingFinal\\HW\\Implement Browser Back Button\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F5E46047-66D1-48F3-879B-853E4859AF8A}|Implement Browser Back Button\\Implement Browser Back Button.csproj|c:\\devlop\\dev\\trainingfinal\\hw\\implement browser back button\\implement browser back button\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5E46047-66D1-48F3-879B-853E4859AF8A}|Implement Browser Back Button\\Implement Browser Back Button.csproj|solutionrelative:implement browser back button\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5E46047-66D1-48F3-879B-853E4859AF8A}|Implement Browser Back Button\\Implement Browser Back Button.csproj|c:\\devlop\\dev\\trainingfinal\\hw\\implement browser back button\\implement browser back button\\webpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5E46047-66D1-48F3-879B-853E4859AF8A}|Implement Browser Back Button\\Implement Browser Back Button.csproj|solutionrelative:implement browser back button\\webpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WebPage.cs",
+              "DocumentMoniker": "C:\\devlop\\dev\\trainingFinal\\HW\\Implement Browser Back Button\\Implement Browser Back Button\\WebPage.cs",
+              "RelativeDocumentMoniker": "Implement Browser Back Button\\WebPage.cs",
+              "ToolTip": "C:\\devlop\\dev\\trainingFinal\\HW\\Implement Browser Back Button\\Implement Browser Back Button\\WebPage.cs",
+              "RelativeToolTip": "Implement Browser Back Button\\WebPage.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAowCYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T10:36:34.181Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\devlop\\dev\\trainingFinal\\HW\\Implement Browser Back Button\\Implement Browser Back Button\\Program.cs",
+              "RelativeDocumentMoniker": "Implement Browser Back Button\\Program.cs",
+              "ToolTip": "C:\\devlop\\dev\\trainingFinal\\HW\\Implement Browser Back Button\\Implement Browser Back Button\\Program.cs",
+              "RelativeToolTip": "Implement Browser Back Button\\Program.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwAkAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T10:34:13.607Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

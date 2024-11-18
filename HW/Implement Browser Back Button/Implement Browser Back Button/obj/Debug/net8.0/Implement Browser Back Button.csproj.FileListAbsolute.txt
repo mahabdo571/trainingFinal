@@ -1,0 +1,15 @@
+C:\devlop\dev\trainingFinal\HW\Implement Browser Back Button\Implement Browser Back Button\bin\Debug\net8.0\Implement Browser Back Button.exe
+C:\devlop\dev\trainingFinal\HW\Implement Browser Back Button\Implement Browser Back Button\bin\Debug\net8.0\Implement Browser Back Button.deps.json
+C:\devlop\dev\trainingFinal\HW\Implement Browser Back Button\Implement Browser Back Button\bin\Debug\net8.0\Implement Browser Back Button.runtimeconfig.json
+C:\devlop\dev\trainingFinal\HW\Implement Browser Back Button\Implement Browser Back Button\bin\Debug\net8.0\Implement Browser Back Button.dll
+C:\devlop\dev\trainingFinal\HW\Implement Browser Back Button\Implement Browser Back Button\bin\Debug\net8.0\Implement Browser Back Button.pdb
+C:\devlop\dev\trainingFinal\HW\Implement Browser Back Button\Implement Browser Back Button\obj\Debug\net8.0\Implement Browser Back Button.GeneratedMSBuildEditorConfig.editorconfig
+C:\devlop\dev\trainingFinal\HW\Implement Browser Back Button\Implement Browser Back Button\obj\Debug\net8.0\Implement Browser Back Button.AssemblyInfoInputs.cache
+C:\devlop\dev\trainingFinal\HW\Implement Browser Back Button\Implement Browser Back Button\obj\Debug\net8.0\Implement Browser Back Button.AssemblyInfo.cs
+C:\devlop\dev\trainingFinal\HW\Implement Browser Back Button\Implement Browser Back Button\obj\Debug\net8.0\Implement Browser Back Button.csproj.CoreCompileInputs.cache
+C:\devlop\dev\trainingFinal\HW\Implement Browser Back Button\Implement Browser Back Button\obj\Debug\net8.0\Implement Browser Back Button.sourcelink.json
+C:\devlop\dev\trainingFinal\HW\Implement Browser Back Button\Implement Browser Back Button\obj\Debug\net8.0\Implement Browser Back Button.dll
+C:\devlop\dev\trainingFinal\HW\Implement Browser Back Button\Implement Browser Back Button\obj\Debug\net8.0\refint\Implement Browser Back Button.dll
+C:\devlop\dev\trainingFinal\HW\Implement Browser Back Button\Implement Browser Back Button\obj\Debug\net8.0\Implement Browser Back Button.pdb
+C:\devlop\dev\trainingFinal\HW\Implement Browser Back Button\Implement Browser Back Button\obj\Debug\net8.0\Implement Browser Back Button.genruntimeconfig.cache
+C:\devlop\dev\trainingFinal\HW\Implement Browser Back Button\Implement Browser Back Button\obj\Debug\net8.0\ref\Implement Browser Back Button.dll
