@@ -1,0 +1,15 @@
+C:\Programming works\trainingFinal\trainingFinal\HW\Undo Operations in a Calculator\Undo Operations in a Calculator\bin\Debug\net8.0\Undo Operations in a Calculator.exe
+C:\Programming works\trainingFinal\trainingFinal\HW\Undo Operations in a Calculator\Undo Operations in a Calculator\bin\Debug\net8.0\Undo Operations in a Calculator.deps.json
+C:\Programming works\trainingFinal\trainingFinal\HW\Undo Operations in a Calculator\Undo Operations in a Calculator\bin\Debug\net8.0\Undo Operations in a Calculator.runtimeconfig.json
+C:\Programming works\trainingFinal\trainingFinal\HW\Undo Operations in a Calculator\Undo Operations in a Calculator\bin\Debug\net8.0\Undo Operations in a Calculator.dll
+C:\Programming works\trainingFinal\trainingFinal\HW\Undo Operations in a Calculator\Undo Operations in a Calculator\bin\Debug\net8.0\Undo Operations in a Calculator.pdb
+C:\Programming works\trainingFinal\trainingFinal\HW\Undo Operations in a Calculator\Undo Operations in a Calculator\obj\Debug\net8.0\Undo Operations in a Calculator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Programming works\trainingFinal\trainingFinal\HW\Undo Operations in a Calculator\Undo Operations in a Calculator\obj\Debug\net8.0\Undo Operations in a Calculator.AssemblyInfoInputs.cache
+C:\Programming works\trainingFinal\trainingFinal\HW\Undo Operations in a Calculator\Undo Operations in a Calculator\obj\Debug\net8.0\Undo Operations in a Calculator.AssemblyInfo.cs
+C:\Programming works\trainingFinal\trainingFinal\HW\Undo Operations in a Calculator\Undo Operations in a Calculator\obj\Debug\net8.0\Undo Operations in a Calculator.csproj.CoreCompileInputs.cache
+C:\Programming works\trainingFinal\trainingFinal\HW\Undo Operations in a Calculator\Undo Operations in a Calculator\obj\Debug\net8.0\Undo Operations in a Calculator.sourcelink.json
+C:\Programming works\trainingFinal\trainingFinal\HW\Undo Operations in a Calculator\Undo Operations in a Calculator\obj\Debug\net8.0\Undo Operations in a Calculator.dll
+C:\Programming works\trainingFinal\trainingFinal\HW\Undo Operations in a Calculator\Undo Operations in a Calculator\obj\Debug\net8.0\refint\Undo Operations in a Calculator.dll
+C:\Programming works\trainingFinal\trainingFinal\HW\Undo Operations in a Calculator\Undo Operations in a Calculator\obj\Debug\net8.0\Undo Operations in a Calculator.pdb
+C:\Programming works\trainingFinal\trainingFinal\HW\Undo Operations in a Calculator\Undo Operations in a Calculator\obj\Debug\net8.0\Undo Operations in a Calculator.genruntimeconfig.cache
+C:\Programming works\trainingFinal\trainingFinal\HW\Undo Operations in a Calculator\Undo Operations in a Calculator\obj\Debug\net8.0\ref\Undo Operations in a Calculator.dll
