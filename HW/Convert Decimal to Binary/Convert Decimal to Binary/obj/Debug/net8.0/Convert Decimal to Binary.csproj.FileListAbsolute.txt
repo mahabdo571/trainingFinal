@@ -1,0 +1,15 @@
+C:\devlop\dev\trainingFinal\HW\Convert Decimal to Binary\Convert Decimal to Binary\bin\Debug\net8.0\Convert Decimal to Binary.exe
+C:\devlop\dev\trainingFinal\HW\Convert Decimal to Binary\Convert Decimal to Binary\bin\Debug\net8.0\Convert Decimal to Binary.deps.json
+C:\devlop\dev\trainingFinal\HW\Convert Decimal to Binary\Convert Decimal to Binary\bin\Debug\net8.0\Convert Decimal to Binary.runtimeconfig.json
+C:\devlop\dev\trainingFinal\HW\Convert Decimal to Binary\Convert Decimal to Binary\bin\Debug\net8.0\Convert Decimal to Binary.dll
+C:\devlop\dev\trainingFinal\HW\Convert Decimal to Binary\Convert Decimal to Binary\bin\Debug\net8.0\Convert Decimal to Binary.pdb
+C:\devlop\dev\trainingFinal\HW\Convert Decimal to Binary\Convert Decimal to Binary\obj\Debug\net8.0\Convert Decimal to Binary.GeneratedMSBuildEditorConfig.editorconfig
+C:\devlop\dev\trainingFinal\HW\Convert Decimal to Binary\Convert Decimal to Binary\obj\Debug\net8.0\Convert Decimal to Binary.AssemblyInfoInputs.cache
+C:\devlop\dev\trainingFinal\HW\Convert Decimal to Binary\Convert Decimal to Binary\obj\Debug\net8.0\Convert Decimal to Binary.AssemblyInfo.cs
+C:\devlop\dev\trainingFinal\HW\Convert Decimal to Binary\Convert Decimal to Binary\obj\Debug\net8.0\Convert Decimal to Binary.csproj.CoreCompileInputs.cache
+C:\devlop\dev\trainingFinal\HW\Convert Decimal to Binary\Convert Decimal to Binary\obj\Debug\net8.0\Convert Decimal to Binary.sourcelink.json
+C:\devlop\dev\trainingFinal\HW\Convert Decimal to Binary\Convert Decimal to Binary\obj\Debug\net8.0\Convert Decimal to Binary.dll
+C:\devlop\dev\trainingFinal\HW\Convert Decimal to Binary\Convert Decimal to Binary\obj\Debug\net8.0\refint\Convert Decimal to Binary.dll
+C:\devlop\dev\trainingFinal\HW\Convert Decimal to Binary\Convert Decimal to Binary\obj\Debug\net8.0\Convert Decimal to Binary.pdb
+C:\devlop\dev\trainingFinal\HW\Convert Decimal to Binary\Convert Decimal to Binary\obj\Debug\net8.0\Convert Decimal to Binary.genruntimeconfig.cache
+C:\devlop\dev\trainingFinal\HW\Convert Decimal to Binary\Convert Decimal to Binary\obj\Debug\net8.0\ref\Convert Decimal to Binary.dll
