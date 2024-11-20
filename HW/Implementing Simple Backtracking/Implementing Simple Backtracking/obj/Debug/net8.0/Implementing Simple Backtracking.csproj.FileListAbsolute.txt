@@ -1,0 +1,15 @@
+C:\Programming works\trainingFinal\trainingFinal\HW\Implementing Simple Backtracking\Implementing Simple Backtracking\bin\Debug\net8.0\Implementing Simple Backtracking.exe
+C:\Programming works\trainingFinal\trainingFinal\HW\Implementing Simple Backtracking\Implementing Simple Backtracking\bin\Debug\net8.0\Implementing Simple Backtracking.deps.json
+C:\Programming works\trainingFinal\trainingFinal\HW\Implementing Simple Backtracking\Implementing Simple Backtracking\bin\Debug\net8.0\Implementing Simple Backtracking.runtimeconfig.json
+C:\Programming works\trainingFinal\trainingFinal\HW\Implementing Simple Backtracking\Implementing Simple Backtracking\bin\Debug\net8.0\Implementing Simple Backtracking.dll
+C:\Programming works\trainingFinal\trainingFinal\HW\Implementing Simple Backtracking\Implementing Simple Backtracking\bin\Debug\net8.0\Implementing Simple Backtracking.pdb
+C:\Programming works\trainingFinal\trainingFinal\HW\Implementing Simple Backtracking\Implementing Simple Backtracking\obj\Debug\net8.0\Implementing Simple Backtracking.GeneratedMSBuildEditorConfig.editorconfig
+C:\Programming works\trainingFinal\trainingFinal\HW\Implementing Simple Backtracking\Implementing Simple Backtracking\obj\Debug\net8.0\Implementing Simple Backtracking.AssemblyInfoInputs.cache
+C:\Programming works\trainingFinal\trainingFinal\HW\Implementing Simple Backtracking\Implementing Simple Backtracking\obj\Debug\net8.0\Implementing Simple Backtracking.AssemblyInfo.cs
+C:\Programming works\trainingFinal\trainingFinal\HW\Implementing Simple Backtracking\Implementing Simple Backtracking\obj\Debug\net8.0\Implementing Simple Backtracking.csproj.CoreCompileInputs.cache
+C:\Programming works\trainingFinal\trainingFinal\HW\Implementing Simple Backtracking\Implementing Simple Backtracking\obj\Debug\net8.0\Implementing Simple Backtracking.sourcelink.json
+C:\Programming works\trainingFinal\trainingFinal\HW\Implementing Simple Backtracking\Implementing Simple Backtracking\obj\Debug\net8.0\Implementing Simple Backtracking.dll
+C:\Programming works\trainingFinal\trainingFinal\HW\Implementing Simple Backtracking\Implementing Simple Backtracking\obj\Debug\net8.0\refint\Implementing Simple Backtracking.dll
+C:\Programming works\trainingFinal\trainingFinal\HW\Implementing Simple Backtracking\Implementing Simple Backtracking\obj\Debug\net8.0\Implementing Simple Backtracking.pdb
+C:\Programming works\trainingFinal\trainingFinal\HW\Implementing Simple Backtracking\Implementing Simple Backtracking\obj\Debug\net8.0\Implementing Simple Backtracking.genruntimeconfig.cache
+C:\Programming works\trainingFinal\trainingFinal\HW\Implementing Simple Backtracking\Implementing Simple Backtracking\obj\Debug\net8.0\ref\Implementing Simple Backtracking.dll

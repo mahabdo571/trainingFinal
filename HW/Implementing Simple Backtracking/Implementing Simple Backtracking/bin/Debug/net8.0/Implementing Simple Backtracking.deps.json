@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Implementing Simple Backtracking/1.0.0": {
+        "runtime": {
+          "Implementing Simple Backtracking.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Implementing Simple Backtracking/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
