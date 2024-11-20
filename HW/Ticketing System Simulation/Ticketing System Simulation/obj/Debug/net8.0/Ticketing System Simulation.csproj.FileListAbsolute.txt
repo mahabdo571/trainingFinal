@@ -1,0 +1,15 @@
+C:\Programming works\trainingFinal\trainingFinal\HW\Ticketing System Simulation\Ticketing System Simulation\bin\Debug\net8.0\Ticketing System Simulation.exe
+C:\Programming works\trainingFinal\trainingFinal\HW\Ticketing System Simulation\Ticketing System Simulation\bin\Debug\net8.0\Ticketing System Simulation.deps.json
+C:\Programming works\trainingFinal\trainingFinal\HW\Ticketing System Simulation\Ticketing System Simulation\bin\Debug\net8.0\Ticketing System Simulation.runtimeconfig.json
+C:\Programming works\trainingFinal\trainingFinal\HW\Ticketing System Simulation\Ticketing System Simulation\bin\Debug\net8.0\Ticketing System Simulation.dll
+C:\Programming works\trainingFinal\trainingFinal\HW\Ticketing System Simulation\Ticketing System Simulation\bin\Debug\net8.0\Ticketing System Simulation.pdb
+C:\Programming works\trainingFinal\trainingFinal\HW\Ticketing System Simulation\Ticketing System Simulation\obj\Debug\net8.0\Ticketing System Simulation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Programming works\trainingFinal\trainingFinal\HW\Ticketing System Simulation\Ticketing System Simulation\obj\Debug\net8.0\Ticketing System Simulation.AssemblyInfoInputs.cache
+C:\Programming works\trainingFinal\trainingFinal\HW\Ticketing System Simulation\Ticketing System Simulation\obj\Debug\net8.0\Ticketing System Simulation.AssemblyInfo.cs
+C:\Programming works\trainingFinal\trainingFinal\HW\Ticketing System Simulation\Ticketing System Simulation\obj\Debug\net8.0\Ticketing System Simulation.csproj.CoreCompileInputs.cache
+C:\Programming works\trainingFinal\trainingFinal\HW\Ticketing System Simulation\Ticketing System Simulation\obj\Debug\net8.0\Ticketing System Simulation.sourcelink.json
+C:\Programming works\trainingFinal\trainingFinal\HW\Ticketing System Simulation\Ticketing System Simulation\obj\Debug\net8.0\Ticketing System Simulation.dll
+C:\Programming works\trainingFinal\trainingFinal\HW\Ticketing System Simulation\Ticketing System Simulation\obj\Debug\net8.0\refint\Ticketing System Simulation.dll
+C:\Programming works\trainingFinal\trainingFinal\HW\Ticketing System Simulation\Ticketing System Simulation\obj\Debug\net8.0\Ticketing System Simulation.pdb
+C:\Programming works\trainingFinal\trainingFinal\HW\Ticketing System Simulation\Ticketing System Simulation\obj\Debug\net8.0\Ticketing System Simulation.genruntimeconfig.cache
+C:\Programming works\trainingFinal\trainingFinal\HW\Ticketing System Simulation\Ticketing System Simulation\obj\Debug\net8.0\ref\Ticketing System Simulation.dll

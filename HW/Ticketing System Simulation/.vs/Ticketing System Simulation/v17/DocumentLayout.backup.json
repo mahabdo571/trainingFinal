@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Programming works\\trainingFinal\\trainingFinal\\HW\\Ticketing System Simulation\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AC537B84-13CD-487E-BBBA-5F050BE8BD6F}|Ticketing System Simulation\\Ticketing System Simulation.csproj|c:\\programming works\\trainingfinal\\trainingfinal\\hw\\ticketing system simulation\\ticketing system simulation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC537B84-13CD-487E-BBBA-5F050BE8BD6F}|Ticketing System Simulation\\Ticketing System Simulation.csproj|solutionrelative:ticketing system simulation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Programming works\\trainingFinal\\trainingFinal\\HW\\Ticketing System Simulation\\Ticketing System Simulation\\Program.cs",
+              "RelativeDocumentMoniker": "Ticketing System Simulation\\Program.cs",
+              "ToolTip": "C:\\Programming works\\trainingFinal\\trainingFinal\\HW\\Ticketing System Simulation\\Ticketing System Simulation\\Program.cs",
+              "RelativeToolTip": "Ticketing System Simulation\\Program.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAQwD4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T19:58:24.036Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

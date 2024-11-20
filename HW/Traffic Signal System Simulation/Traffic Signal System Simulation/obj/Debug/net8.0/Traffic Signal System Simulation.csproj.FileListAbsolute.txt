@@ -1,0 +1,15 @@
+C:\Programming works\trainingFinal\trainingFinal\HW\Traffic Signal System Simulation\Traffic Signal System Simulation\bin\Debug\net8.0\Traffic Signal System Simulation.exe
+C:\Programming works\trainingFinal\trainingFinal\HW\Traffic Signal System Simulation\Traffic Signal System Simulation\bin\Debug\net8.0\Traffic Signal System Simulation.deps.json
+C:\Programming works\trainingFinal\trainingFinal\HW\Traffic Signal System Simulation\Traffic Signal System Simulation\bin\Debug\net8.0\Traffic Signal System Simulation.runtimeconfig.json
+C:\Programming works\trainingFinal\trainingFinal\HW\Traffic Signal System Simulation\Traffic Signal System Simulation\bin\Debug\net8.0\Traffic Signal System Simulation.dll
+C:\Programming works\trainingFinal\trainingFinal\HW\Traffic Signal System Simulation\Traffic Signal System Simulation\bin\Debug\net8.0\Traffic Signal System Simulation.pdb
+C:\Programming works\trainingFinal\trainingFinal\HW\Traffic Signal System Simulation\Traffic Signal System Simulation\obj\Debug\net8.0\Traffic Signal System Simulation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Programming works\trainingFinal\trainingFinal\HW\Traffic Signal System Simulation\Traffic Signal System Simulation\obj\Debug\net8.0\Traffic Signal System Simulation.AssemblyInfoInputs.cache
+C:\Programming works\trainingFinal\trainingFinal\HW\Traffic Signal System Simulation\Traffic Signal System Simulation\obj\Debug\net8.0\Traffic Signal System Simulation.AssemblyInfo.cs
+C:\Programming works\trainingFinal\trainingFinal\HW\Traffic Signal System Simulation\Traffic Signal System Simulation\obj\Debug\net8.0\Traffic Signal System Simulation.csproj.CoreCompileInputs.cache
+C:\Programming works\trainingFinal\trainingFinal\HW\Traffic Signal System Simulation\Traffic Signal System Simulation\obj\Debug\net8.0\Traffic Signal System Simulation.sourcelink.json
+C:\Programming works\trainingFinal\trainingFinal\HW\Traffic Signal System Simulation\Traffic Signal System Simulation\obj\Debug\net8.0\Traffic Signal System Simulation.dll
+C:\Programming works\trainingFinal\trainingFinal\HW\Traffic Signal System Simulation\Traffic Signal System Simulation\obj\Debug\net8.0\refint\Traffic Signal System Simulation.dll
+C:\Programming works\trainingFinal\trainingFinal\HW\Traffic Signal System Simulation\Traffic Signal System Simulation\obj\Debug\net8.0\Traffic Signal System Simulation.pdb
+C:\Programming works\trainingFinal\trainingFinal\HW\Traffic Signal System Simulation\Traffic Signal System Simulation\obj\Debug\net8.0\Traffic Signal System Simulation.genruntimeconfig.cache
+C:\Programming works\trainingFinal\trainingFinal\HW\Traffic Signal System Simulation\Traffic Signal System Simulation\obj\Debug\net8.0\ref\Traffic Signal System Simulation.dll
