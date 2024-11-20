@@ -1,5 +1,4 @@
 import 'package:chat_app6/screens/chat_list.dart';
-import 'package:chat_app6/screens/chat_screen.dart';
 import 'package:chat_app6/widgets/my_btn.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';

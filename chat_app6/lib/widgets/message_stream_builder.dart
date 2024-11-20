@@ -20,7 +20,7 @@ class MessageStreamBuilder extends StatefulWidget {
 class _MessageStreamBuilderState extends State<MessageStreamBuilder> {
   final _auth = FirebaseAuth.instance;
 
-  late String? roomId='';
+  late String? roomId = '';
 
   void getIdDocUser() async {
     DocumentReference? roomRef;
@@ -46,7 +46,6 @@ class _MessageStreamBuilderState extends State<MessageStreamBuilder> {
   Widget build(BuildContext context) {
     getIdDocUser();
 
-   
     return StreamBuilder<QuerySnapshot>(
       stream: widget._fireStore
           .collection('users')

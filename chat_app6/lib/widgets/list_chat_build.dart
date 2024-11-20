@@ -62,7 +62,7 @@ class ListChatBuild extends StatelessWidget {
                           });
                     },
                     child: ListTile(
-                      leading: CircleAvatar(
+                      leading: const CircleAvatar(
                         backgroundColor: Colors.blue,
                         child: Text('ddddd'), // أول حرف من الاسم
                       ),
