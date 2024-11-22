@@ -1,6 +1,8 @@
-import 'package:flutter/material.dart';
+
+import './models/season.dart';
+import './models/trip.dart';
+import './models/trip_type.dart';
 import './models/category.dart';
-//  import './models/trip.dart';
 
 const Categories_data = const [
   Category(
@@ -40,8 +42,8 @@ const Categories_data = const [
         'https://images.unsplash.com/photo-1605540436563-5bca919ae766?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8c2tpaW5nfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60',
   ),
 ];
-/*
- const Trips_data = const [
+
+final Trips_data =  [
   Trip(
     id: 'm1',
     categories: [
@@ -525,4 +527,3 @@ const Categories_data = const [
     isInWinter: true,
   ),
 ];
-*/

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:traveling_app7/screens/categories_screen.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:traveling_app7/screens/category_trips_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -42,7 +43,11 @@ class MainApp extends StatelessWidget {
             ),
         fontFamily: 'ElMessiri',
       ),
-      home: CategoriesScreen(),
+     initialRoute: '/',
+      routes: {
+        '/': (ctx) =>CategoriesScreen(),
+        CategoryTripsScreen.screenRoute: (ctx) =>CategoryTripsScreen(),
+      },
     );
   }
 }

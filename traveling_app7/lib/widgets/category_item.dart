@@ -13,12 +13,10 @@ class CategoryItem extends StatelessWidget {
   final String imageUrl;
 
   void selectCategory(BuildContext ctx) {
-    Navigator.of(ctx).push(MaterialPageRoute(
-      builder: (c) => CategoryTripsScreen(
-        categoryId: id,
-        CategoryTitle: title,
-      ),
-    ));
+    Navigator.of(ctx).pushNamed(CategoryTripsScreen.screenRoute, arguments: {
+      'id': id,
+      'title': title,
+    });
   }
 
   @override
