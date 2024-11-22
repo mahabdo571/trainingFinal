@@ -19,7 +19,7 @@ class MainApp extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: const [
-        Locale('ar','AE'), // English
+        Locale('ar', 'AE'), // English
       ],
       title: 'Traveling App',
       theme: ThemeData(
@@ -43,10 +43,10 @@ class MainApp extends StatelessWidget {
             ),
         fontFamily: 'ElMessiri',
       ),
-     initialRoute: '/',
+      initialRoute: '/',
       routes: {
-        '/': (ctx) =>CategoriesScreen(),
-        CategoryTripsScreen.screenRoute: (ctx) =>CategoryTripsScreen(),
+        '/': (ctx) => const CategoriesScreen(),
+        CategoryTripsScreen.screenRoute: (ctx) => CategoryTripsScreen(),
       },
     );
   }
