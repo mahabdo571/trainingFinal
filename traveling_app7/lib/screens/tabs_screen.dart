@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:traveling_app7/screens/categories_screen.dart';
 import 'package:traveling_app7/screens/favorites_screen.dart';
+import '../widgets/app_drawer.dart';
 
 class TabsScreen extends StatefulWidget {
   const TabsScreen({super.key});
@@ -11,9 +12,15 @@ class TabsScreen extends StatefulWidget {
 
 class _TabsScreenState extends State<TabsScreen> {
   int _selectedScreenIndex = 0;
-  final List<Widget> _screens = [
-    CategoriesScreen(),
-    FavoritesScreen(),
+  final List<Map<String, Object>> _screens = [
+    {
+      'Screen': const CategoriesScreen(),
+      'Title': 'التصنيفات',
+    },
+    {
+      'Screen': const FavoritesScreen(),
+      'Title': 'المفضلة',
+    },
   ];
   void _selectScreen(int index) {
     setState(() {
@@ -27,18 +34,19 @@ class _TabsScreenState extends State<TabsScreen> {
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.primary,
         title: Text(
-          'دليل سياحي',
+          _screens[_selectedScreenIndex]['Title'] as String,
           style: Theme.of(context).textTheme.headlineLarge,
         ),
       ),
-      body: _screens[_selectedScreenIndex],
+      drawer: const AppDrawer(),
+      body: _screens[_selectedScreenIndex]['Screen'] as Widget,
       bottomNavigationBar: BottomNavigationBar(
         onTap: _selectScreen,
         backgroundColor: Theme.of(context).colorScheme.primary,
         selectedItemColor: Theme.of(context).colorScheme.secondary,
         unselectedItemColor: Colors.white,
         currentIndex: _selectedScreenIndex,
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.dashboard),
             label: 'التصنيفات',

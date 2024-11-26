@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:traveling_app7/screens/categories_screen.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:traveling_app7/screens/category_trips_screen.dart';
+import 'package:traveling_app7/screens/filters_screen.dart';
 import 'package:traveling_app7/screens/tabs_screen.dart';
 import 'package:traveling_app7/screens/trip_detail_screen.dart';
 
@@ -50,13 +51,13 @@ class MainApp extends StatelessWidget {
               ),
             ),
         fontFamily: 'ElMessiri',
-        
       ),
       initialRoute: '/',
       routes: {
         '/': (ctx) => const TabsScreen(),
         CategoryTripsScreen.screenRoute: (ctx) => CategoryTripsScreen(),
         TripDetailScreen.screenRoute: (ctx) => TripDetailScreen(),
+        FiltersScreen.screenRoute: (ctx) => FiltersScreen(),
       },
     );
   }
