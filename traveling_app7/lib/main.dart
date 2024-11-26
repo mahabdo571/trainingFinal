@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:traveling_app7/screens/categories_screen.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:traveling_app7/screens/category_trips_screen.dart';
+import 'package:traveling_app7/screens/tabs_screen.dart';
 import 'package:traveling_app7/screens/trip_detail_screen.dart';
 
 void main() {
@@ -25,7 +26,7 @@ class MainApp extends StatelessWidget {
       title: 'Traveling App',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.blue,
+          seedColor: Colors.white,
           secondary: Colors.amber,
         ),
         textTheme: ThemeData.light().textTheme.copyWith(
@@ -41,12 +42,19 @@ class MainApp extends StatelessWidget {
                 fontFamily: 'ElMessiri',
                 fontWeight: FontWeight.bold,
               ),
+              headlineSmall: const TextStyle(
+                color: Colors.white,
+                fontSize: 22,
+                fontFamily: 'ElMessiri',
+                fontWeight: FontWeight.bold,
+              ),
             ),
         fontFamily: 'ElMessiri',
+        
       ),
       initialRoute: '/',
       routes: {
-        '/': (ctx) => const CategoriesScreen(),
+        '/': (ctx) => const TabsScreen(),
         CategoryTripsScreen.screenRoute: (ctx) => CategoryTripsScreen(),
         TripDetailScreen.screenRoute: (ctx) => TripDetailScreen(),
       },

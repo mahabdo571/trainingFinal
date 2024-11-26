@@ -7,30 +7,21 @@ class CategoriesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.primary,
-        title: const Text(
-          'دليل سياحي',
-          style: TextStyle(color: Colors.white),
-        ),
+    return GridView(
+      padding: EdgeInsets.all(10),
+      gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+        maxCrossAxisExtent: 200,
+        childAspectRatio: 7 / 8,
+        mainAxisSpacing: 10,
+        crossAxisSpacing: 10,
       ),
-      body: GridView(
-        padding: EdgeInsets.all(10),
-        gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-          maxCrossAxisExtent: 200,
-          childAspectRatio: 7 / 8,
-          mainAxisSpacing: 10,
-          crossAxisSpacing: 10,
+      children: Categories_data.map(
+        (categoryData) => CategoryItem(
+          title: categoryData.title,
+          imageUrl: categoryData.imageUrl,
+          id: categoryData.id,
         ),
-        children: Categories_data.map(
-          (categoryData) => CategoryItem(
-            title: categoryData.title,
-            imageUrl: categoryData.imageUrl,
-            id: categoryData.id,
-          ),
-        ).toList(),
-      ),
+      ).toList(),
     );
   }
 }
