@@ -14,6 +14,8 @@ use Illuminate\Support\Str;
 use Carbon\Carbon;
 use Tymon\JWTAuth\Facades\JWTAuth;
 
+use function Laravel\Prompts\error;
+
 class AuthController extends Controller
 {
 
@@ -22,8 +24,10 @@ class AuthController extends Controller
         $validated = $request->validate([
             'name' => 'required',
             'email' => 'required|email|unique:users,email',
-            'password' => 'required|min:6',
+            'password' => 'required|min:6|confirmed',
         ]);
+
+
 
         $user = User::create([
             'name' => $validated['name'],
