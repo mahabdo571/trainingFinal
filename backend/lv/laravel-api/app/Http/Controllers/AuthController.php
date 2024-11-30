@@ -12,6 +12,7 @@ use App\Mail\VerifyEmail;
 use App\Mail\ResetPasswordEmail;
 use Illuminate\Support\Str;
 use Carbon\Carbon;
+use Tymon\JWTAuth\Facades\JWTAuth;
 
 class AuthController extends Controller
 {
@@ -50,10 +51,12 @@ class AuthController extends Controller
         }
 
         $credentials = $request->only('email', 'password');
-
-        if (!$token = Auth::attempt($credentials)) {
+        if (!$token = JWTAuth::attempt($credentials)) {
             return response()->json(['error' => 'بيانات الدخول غير صحيحة.'], 401);
         }
+        // if (!$token = Auth::attempt($credentials)) {
+        //     return response()->json(['error' => 'بيانات الدخول غير صحيحة.'], 401);
+        // }
 
         return response()->json([[
             "status" => true,
