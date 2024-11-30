@@ -32,7 +32,7 @@ class AuthController extends Controller
         $user = User::create([
             'name' => $validated['name'],
             'email' => $validated['email'],
-            'password' => Hash::make($validated['password']),
+            'password' => bcrypt($validated['password']),
             'email_verification_token' => Str::random(32),
 
         ]);
@@ -63,9 +63,11 @@ class AuthController extends Controller
         // }
 
         return response()->json([[
-            "status" => true,
-            "message" => "User logged in succcessfully",
+            "message" =>"تم تسجيل الدخول بنجاح",
+            "token_type" => 'Bearer',
+            "expires_in" => JWTAuth::factory()->getTTL() * 60,
             "token" => $token,
+            "user" => JWTAuth::user(),
 
         ]]);
     }
