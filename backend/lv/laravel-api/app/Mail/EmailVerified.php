@@ -9,9 +9,10 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class ResetPasswordEmail extends Mailable
+class EmailVerified extends Mailable
 {
     use Queueable, SerializesModels;
+
     public $user;
 
     /**
@@ -23,12 +24,12 @@ class ResetPasswordEmail extends Mailable
     }
     public function build()
     {
-        return $this->subject('Reset Your Password')
-                    ->view('emails.reset-password')
-                    ->with([
-                        'name' => $this->user->name,
-                        'resetUrl' => url('/api/reset-password/' . $this->user->reset_password_token),
-                    ]);
+        return $this->subject('EmailVerified')
+            ->view('emails.EmailVerified')
+            ->with([
+                'name' => $this->user->name,
+                'email' => $this->user->email,
+            ]);
     }
     /**
      * Get the message envelope.
@@ -36,7 +37,7 @@ class ResetPasswordEmail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Reset Password Email',
+            subject: 'Email Verified',
         );
     }
 
