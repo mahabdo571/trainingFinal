@@ -1,0 +1,10 @@
+C:\FileMonitoring\FileMonitoring\FileMonitoring\bin\Release\FileMonitoring.exe.config
+C:\FileMonitoring\FileMonitoring\FileMonitoring\bin\Release\FileMonitoring.exe
+C:\FileMonitoring\FileMonitoring\FileMonitoring\bin\Release\FileMonitoring.pdb
+C:\FileMonitoring\FileMonitoring\FileMonitoring\bin\Release\System.Configuration.ConfigurationManager.dll
+C:\FileMonitoring\FileMonitoring\FileMonitoring\bin\Release\System.Configuration.ConfigurationManager.xml
+C:\FileMonitoring\FileMonitoring\FileMonitoring\obj\Release\FileMonitoring.csproj.AssemblyReference.cache
+C:\FileMonitoring\FileMonitoring\FileMonitoring\obj\Release\FileMonitoring.csproj.CoreCompileInputs.cache
+C:\FileMonitoring\FileMonitoring\FileMonitoring\obj\Release\FileMoni.3AEA396F.Up2Date
+C:\FileMonitoring\FileMonitoring\FileMonitoring\obj\Release\FileMonitoring.exe
+C:\FileMonitoring\FileMonitoring\FileMonitoring\obj\Release\FileMonitoring.pdb
